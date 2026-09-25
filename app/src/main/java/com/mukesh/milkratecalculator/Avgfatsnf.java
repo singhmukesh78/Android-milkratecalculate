@@ -37,7 +37,6 @@ public class Avgfatsnf extends AppCompatActivity implements AdapterView.OnItemSe
 
     private String Rt1, Rt2, Rt3, Rt4, Rt5, Rt6, Rt7, Rt8, Rt9, Rt10;
 
-    private String totalAmt1, totalAmt2, totalAmt3, totalAmt4, totalAmt5, totalAmt6;
     float fatAvg = 0.0F, snfAvg = 0.0F, totalMilk = 0.0F;
     float CalcRate, mRate, fsRatio = 50F, StRate;
     String AvgFat, AvgSnf, TotalMilk, stRate, totalAmt;

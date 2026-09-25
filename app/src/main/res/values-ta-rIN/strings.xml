@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Milk Rate Calculator</string>
+    <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
+    <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="title">டாஷ்போர்டு</string>
+    <string name="standard_rate">நிலையான விகிதம்</string>
+    <string name="fat_ratio">பாட்  விகிதம்</string>
+    <string name="fat">"பாட் "</string>
+    <string name="snf">"ஸ்நப் "</string>
+    <string name="qty">அளவு</string>
+    <string name="calculate">கணக்கிடு</string>
+    <string name="clear">தெளிவு</string>
+    <string name="rate">மதிப்பிடவும்</string>
+    <string name="amount">தொகை</string>
+    <string name="date">தேதி:</string>
+    <string name="shift">ஷிப்ட்</string>
+    <string name="avg_rate">சராசரி விகிதம்</string>
+    <string name="total_milk">மொத்த பால்:</string>
+    <string name="avg_fat">சராசரி கொழுப்பு</string>
+    <string name="avg_clr">சராசரி சிஎல்ஆர்</string>
+    <string name="total">மொத்தம்:</string>
+    <string name="milk_ltr">பால் லிட்டர்</string>
+    <string name="ltr">லிட்டர்</string>
+    <string name="ghee">நெய்</string>
+    <string name="density">அடர்த்தி</string>
+    <string name="milk_kg">பால் (கிலோ)</string>
+    <string name="clr">சி எல் ஆர்</string>
+    <string name="rate_fat_snf">கொழுப்பு விகிதம் / எஸ் என் எஃப்</string>
+    <string name="rate_gurber">குர்பரை மதிப்பிடவும்</string>
+    <string name="ltr_kg">லிட்டர்->கிலோ</string>
+    <string name="avg_fat_snf">சராசரி FAT/SNF</string>
+    <string name="avg_fat_clr">சராசரி FAT/CLR</string>
+    <string name="about_milk">பால் பற்றி</string>
+    <string name="what_is_milk_cob">மில்க் சிஓபி என்றால் என்ன?</string>
+    <string name="what_are_the_standards_for_milk_testing">பால் பரிசோதனைக்கான தரநிலைகள் என்ன?</string>
+    <string name="what_is_the_acidity_or_ph_of_milk">பாலின் அமிலத்தன்மை அல்லது pH என்றால் என்ன?</string>
+    <string name="what_is_the_snf_in_milk">பாலில் உள்ள SNF என்ன?</string>
+    <string name="what_is_milk_density_test">பால் அடர்த்தி சோதனை என்றால் என்ன?</string>
+    <string name="what_acid_is_in_milk">பாலில் என்ன அமிலம் உள்ளது?</string>
+    <string name="what_is_a1_and_a2_milk">A1 மற்றும் A2 பால் என்றால் என்ன?</string>
+    <string name="ghee_amout">நெய் விலை</string>
+    <string name="powder">தூள்</string>
+    <string name="powder_amount">தூள் விலை</string>
+    <string name="total_amount">மொத்த தொகை</string>
+
+</resources>

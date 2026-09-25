@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "579546748570",
+    "project_id": "milkratecalculator",
+    "storage_bucket": "milkratecalculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579546748570:android:44e3420306149ba708b123",
+        "android_client_info": {
+          "package_name": "com.mukesh.milkratecalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579546748570-n8rukhokinsofp4b04su4von662958k6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mukesh.milkratecalculator",
+            "certificate_hash": "a58761814e4aa5ab6f00a761719259c023fece6f"
+          }
+        },
+        {
+          "client_id": "579546748570-nq2ql2upuo0iui0ct4e3mb4b11pi3fkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOgWAYXMNXXoRrrgA97IcauR03iLgDesI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579546748570-nq2ql2upuo0iui0ct4e3mb4b11pi3fkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Milk Rate Calculator</string>
+    <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
+    <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="title">ಡ್ಯಾಶ್ಬೋರ್ಡ್</string>
+    <string name="standard_rate">ಪ್ರಮಾಣಿತ ದರ</string>
+    <string name="fat_ratio">ಕೊಬ್ಬಿನ ಅನುಪಾತ</string>
+    <string name="fat">ಕೊಬ್ಬು</string>
+    <string name="snf">ಸ್ನಾಫ್</string>
+    <string name="qty">ಮೊತ್ತ</string>
+    <string name="calculate">ಲೆಕ್ಕಾಚಾರ</string>
+    <string name="clear">ಅಳಿಸಿ</string>
+    <string name="date">ದಿನಾಂಕ:</string>
+    <string name="shift">ಶಿಫ್ಟ್</string>
+    <string name="avg_rate">ಸರಾಸರಿ ದರ</string>
+    <string name="total_milk">ಒಟ್ಟು ಹಾಲು:</string>
+    <string name="avg_fat">ಸರಾಸರಿ ಕೊಬ್ಬು</string>
+    <string name="avg_clr">ಸರಾಸರಿ ಸಿ ಎಲ್ ಆರ್</string>
+    <string name="total">ಒಟ್ಟು:</string>
+    <string name="milk_ltr">"ಹಾಲು ಲೀಟರ್ "</string>
+    <string name="ltr">ಲೀಟರ್</string>
+    <string name="ghee">ತುಪ್ಪ</string>
+    <string name="density">ಸಾಂದ್ರತೆ</string>
+    <string name="milk_kg">ಹಾಲು (ಕೆಜಿ)</string>
+    <string name="rate">ದರ</string>
+    <string name="amount">ಮೊತ್ತ</string>
+    <string name="clr">ಸಿ ಎಲ್ ಆರ್</string>
+    <string name="rate_fat_snf">ದರ ಕೊಬ್ಬು/ಸ್ನಾಫ್</string>
+    <string name="rate_gurber">ಗರ್ಬರ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ</string>
+    <string name="ltr_kg">ಲೀಟರ್ -> ಕೆಜಿ</string>
+    <string name="avg_fat_snf">సగటు ಕೊಬ್ಬು/ಸ್ನಾಫ್</string>
+    <string name="avg_fat_clr">సగటు</string>
+    <string name="about_milk">ಹಾಲಿನ ಬಗ್ಗೆ</string>
+    <string name="what_is_milk_cob">ಮಿಲ್ಕ್ COB ಎಂದರೇನು?</string>
+    <string name="what_are_the_standards_for_milk_testing">ಹಾಲು ಪರೀಕ್ಷೆಯ ಮಾನದಂಡಗಳು ಯಾವುವು?</string>
+    <string name="what_is_the_acidity_or_ph_of_milk">ಹಾಲಿನ ಆಮ್ಲೀಯತೆ ಅಥವಾ ಪಿಹೆಚ್ ಎಂದರೇನು?</string>
+    <string name="what_is_the_snf_in_milk">ಹಾಲಿನಲ್ಲಿರುವ SNF ಎಂದರೇನು?</string>
+    <string name="what_is_milk_density_test">ಹಾಲಿನ ಸಾಂದ್ರತೆ ಪರೀಕ್ಷೆ ಎಂದರೇನು?</string>
+    <string name="what_acid_is_in_milk">ಹಾಲಿನಲ್ಲಿ ಯಾವ ಆಮ್ಲವಿದೆ?</string>
+    <string name="what_is_a1_and_a2_milk">A1 ಮತ್ತು A2 ಹಾಲು ಎಂದರೇನು?</string>
+    <string name="ghee_amout">ತುಪ್ಪದ ಬೆಲೆ</string>
+    <string name="powder">ಪುಡಿ</string>
+    <string name="powder_amount">ಪುಡಿ ಬೆಲೆ</string>
+</resources>

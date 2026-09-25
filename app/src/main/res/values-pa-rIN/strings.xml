@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Milk Rate Calculator</string>
+    <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
+    <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="title">ਡੈਸ਼ਬੋਰਡ</string>
+    <string name="standard_rate">ਮਿਆਰੀ ਦਰ</string>
+    <string name="fat_ratio">ਚਰਬੀ ਅਨੁਪਾਤ</string>
+    <string name="fat">ਚਰਬੀ</string>
+    <string name="snf">ਸਨੈਫ</string>
+    <string name="qty">ਦੀ ਰਕਮ</string>
+    <string name="calculate">ਗਣਨਾ ਕਰੋ</string>
+    <string name="clear">ਮਿਟਾਓ</string>
+    <string name="rate">ਦਰ</string>
+    <string name="amount">ਦੀ ਰਕਮ</string>
+    <string name="date">ਤਾਰੀਖ਼:</string>
+    <string name="shift">ਵਾਰੀ</string>
+    <string name="avg_rate">ਔਸਤ ਦਰ</string>
+    <string name="total_milk">ਕੁੱਲ ਦੁੱਧ:</string>
+    <string name="avg_fat">ਔਸਤ ਚਰਬੀ</string>
+    <string name="avg_clr">ਔਸਤ C L R</string>
+    <string name="total">ਕੁੱਲ</string>
+    <string name="milk_ltr">ਦੁੱਧ ਲੀਟਰ</string>
+    <string name="ltr">ਲਿਟਰ</string>
+    <string name="ghee">ਘੀ</string>
+    <string name="density">ਘਣਤਾ</string>
+    <string name="clr">ਸੀ ਐਲ ਆਰ</string>
+    <string name="rate_fat_snf">ਦਰ ਚਰਬੀ / S N F</string>
+    <string name="rate_gurber">ਦਰਜਾ ਗੁਰਬਰ</string>
+    <string name="ltr_kg">ਲਿਟਰ-> ਕਿਲੋਗ੍ਰਾਮ</string>
+    <string name="avg_fat_snf">ਔਸਤ FAT/SNF</string>
+    <string name="avg_fat_clr">ਔਸਤ FAT/CLR</string>
+    <string name="about_milk">ਦੁੱਧ ਬਾਰੇ</string>
+    <string name="what_is_milk_cob">ਦੁੱਧ COB ਕੀ ਹੈ?</string>
+    <string name="what_are_the_standards_for_milk_testing">What are the standards for milk testing?</string>
+    <string name="what_is_the_acidity_or_ph_of_milk">ਦੁੱਧ ਦੀ ਐਸਿਡਿਟੀ ਜਾਂ pH ਕੀ ਹੈ?</string>
+    <string name="what_is_the_snf_in_milk">ਦੁੱਧ ਵਿੱਚ SNF ਕੀ ਹੈ?</string>
+    <string name="what_is_milk_density_test">ਦੁੱਧ ਦੀ ਘਣਤਾ ਟੈਸਟ ਕੀ ਹੈ?</string>
+    <string name="what_acid_is_in_milk">ਦੁੱਧ ਵਿੱਚ ਕਿਹੜਾ ਐਸਿਡ ਹੁੰਦਾ ਹੈ?</string>
+    <string name="what_is_a1_and_a2_milk">A1 ਅਤੇ A2 ਦੁੱਧ ਕੀ ਹੈ?</string>
+    <string name="milk_kg">ਦੁੱਧ (ਕਿਲੋਗ੍ਰਾਮ)</string>
+    <string name="ghee_amout">ਘਿਓ ਦੀ ਕੀਮਤ</string>
+    <string name="powder">ਪਾਊਡਰ</string>
+    <string name="powder_amount">ਪਾਊਡਰ ਦੀ ਕੀਮਤ</string>
+    <string name="total_amount">ਕੁੱਲ ਮਾਤਰਾ</string>
+</resources>

@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Milk Rate Calculator</string>
+    <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
+    <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="title">Dash Board</string>
+    <string name="standard_rate">Standard Rate</string>
+    <string name="fat_ratio">FAT Ratio</string>
+    <string name="fat">FAT</string>
+    <string name="snf">S N F</string>
+    <string name="qty">QTY</string>
+    <string name="calculate">Calculate</string>
+    <string name="clear">Clear</string>
+    <string name="rate">Rate</string>
+    <string name="amount">Amount</string>
+    <string name="clr">C L R</string>
+    <string name="rate_fat_snf">Rate FAT/SNF</string>
+    <string name="rate_gurber">Rate Gurber</string>
+    <string name="ltr_kg">Ltr-->Kg</string>
+    <string name="avg_fat_snf">Avg FAT/SNF</string>
+    <string name="avg_fat_clr">Avg FAT/CLR</string>
+    <string name="about_milk">About Milk</string>
+    <string name="what_is_milk_cob">What is Milk COB?</string>
+    <string name="what_are_the_standards_for_milk_testing">What are the standards for milk testing?</string>
+    <string name="what_is_the_acidity_or_ph_of_milk">What Is the Acidity or pH of Milk?</string>
+    <string name="what_is_the_snf_in_milk">What is the SNF in milk?</string>
+    <string name="what_is_milk_density_test">What is milk density test?</string>
+    <string name="what_acid_is_in_milk">What acid is in milk?</string>
+    <string name="what_is_a1_and_a2_milk">What is A1 and A2 milk?</string>
+    <string name="date">Date:</string>
+    <string name="shift">Shift</string>
+    <string name="avg_rate">Avg Rate:</string>
+    <string name="total_milk">Total Milk:</string>
+    <string name="avg_fat">Avg FAT:</string>
+    <string name="avg_clr">Avg CLR:</string>
+    <string name="total">Total:</string>
+    <string name="milk_ltr">Milk Ltr</string>
+    <string name="ltr">Liter</string>
+    <string name="density">Density</string>
+    <string name="ghee">Ghee</string>
+
+    <string-array name="fat_ratio">
+        <item>50:50 </item>
+        <item>52:48 </item>
+        <item>60:40 </item>
+    </string-array>
+    <string name="milk_kg">Milk(KG)</string>
+    <string name="ghee_amout">Ghee Amout</string>
+    <string name="powder">Powder</string>
+    <string name="powder_amount">Powder Amount</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="google_sign_in" translatable="false">Sign in with Google</string>
+    <string name="cob_answer" translatable="false">The COB test is a rapid screening test used to check the freshness and stability of milk. If milk curdles or clots when boiled, it indicates high acidity (due to bacterial spoilage or mastitis), meaning the milk is spoiled and unsuitable for processing.</string>
+    <string name="standards_answer" translatable="false">Standard milk testing involves checking FAT percentage, SNF (Solid Not Fat) content, CLR (Corrected Lactometer Reading) at 29°C temperature, acidity/pH, and checking for adulterants like water, urea, detergent, and starch.</string>
+    <string name="ph_answer" translatable="false">Fresh, raw cow\'s milk typically has a pH between 6.5 and 6.7 (slightly acidic to neutral). An increase in acidity (lower pH) indicates bacterial fermentation and lactic acid production, signaling souring or spoilage.</string>
+    <string name="snf_answer" translatable="false">SNF refers to the total solids in milk excluding butterfat and water. It includes proteins (casein, whey), lactose, and minerals (ash). For cow milk, standard SNF is around 8.5%, and for buffalo milk, it is around 9.0%.</string>
+    <string name="density_answer" translatable="false">Milk density is measured using a lactometer. Normal cow milk density ranges from 1.028 to 1.030 g/ml, and buffalo milk ranges from 1.030 to 1.032 g/ml. Watering milk decreases density, while skimming increases it.</string>
+    <string name="acid_answer" translatable="false">The primary natural acid in fresh milk is lactic acid (formed when bacteria ferment milk lactose), along with citric acid and free fatty acids.</string>
+    <string name="a1_a2_answer" translatable="false">A1 and A2 refer to two different types of beta-casein protein found in cow\'s milk. A2 milk comes from cows that produce only A2 beta-casein (common in indigenous/desi breeds like Gir, Sahiwal), which many people find easier to digest than A1 milk.</string>
+
+</resources>

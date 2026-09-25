@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="#F68630"
+        >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/imgnumberverification"
+
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP Verification"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            android:textColor="#109595"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#109595"
+            android:text="We will send you an OTP on this given mobile no">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/backgroundbox"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/countryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="left"
+                        app:ccpDialog_textColor="@color/teal_700"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_contentColor="@color/teal_700"
+                        app:ccp_defaultNameCode="IND"
+                        app:ccp_showFlag="true"
+                        app:ccp_showFullName="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_textSize="18sp">
+
+
+                    </com.hbb20.CountryCodePicker>
+
+            <EditText
+                android:id="@+id/etMobilNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="@null"
+                android:hint="Mobil Number"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+<Button
+    android:id="@+id/SndOtp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Get OTP"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="12dp"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:background="@drawable/backbutton"
+    />
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btnGoogleSignIn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginBottom="30dp"
+    android:text="@string/google_sign_in"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    app:backgroundTint="@color/white"
+    app:cornerRadius="12dp"
+    app:elevation="3dp"
+    app:strokeColor="#CCCCCC"
+    app:strokeWidth="1dp" />
+
+    </LinearLayout>
+</ScrollView>
+

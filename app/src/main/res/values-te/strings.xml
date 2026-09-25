@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Milk Rate Calculator</string>
+    <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
+    <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="title">డాష్బోర్డ్</string>
+    <string name="standard_rate">ప్రామాణిక రేటు</string>
+    <string name="fat_ratio">"ఫాట్ రేషియో "</string>
+    <string name="fat">"ఫాట్ "</string>
+    <string name="snf">"సనాఫ్ "</string>
+    <string name="qty">పరిమాణం</string>
+    <string name="calculate">లెక్కించు</string>
+    <string name="clear">క్లియర్</string>
+    <string name="rate">రేటు</string>
+    <string name="amount">మొత్తం</string>
+    <string name="clr">సి ఎల్ ఆర్</string>
+    <string name="rate_fat_snf">కొవ్వు రేటు / S N F</string>
+    <string name="rate_gurber">గర్బర్‌ని రేట్ చేయండి</string>
+    <string name="ltr_kg">లీటరు-> కేజీ</string>
+    <string name="avg_fat_snf">సగటు FAT/SNF</string>
+    <string name="avg_fat_clr">సగటు FAT/CLR</string>
+    <string name="about_milk">పాలు గురించి</string>
+    <string name="what_is_milk_cob">మిల్క్ COB అంటే ఏమిటి?</string>
+    <string name="what_are_the_standards_for_milk_testing">పాల పరీక్ష ప్రమాణాలు ఏమిటి?</string>
+    <string name="what_is_the_acidity_or_ph_of_milk">పాలు యొక్క ఆమ్లత్వం లేదా pH అంటే ఏమిటి?</string>
+    <string name="what_is_the_snf_in_milk">పాలలో SNF అంటే ఏమిటి?</string>
+    <string name="what_is_milk_density_test">పాల సాంద్రత పరీక్ష అంటే ఏమిటి?</string>
+    <string name="what_acid_is_in_milk">పాలలో ఏ యాసిడ్ ఉంటుంది?</string>
+    <string name="what_is_a1_and_a2_milk">A1 మరియు A2 పాలు అంటే ఏమిటి?</string>
+    <string name="date">తేదీ:</string>
+    <string name="shift">మార్పు</string>
+    <string name="avg_rate">సగటు వెల</string>
+    <string name="total_milk">సగటు వెల</string>
+    <string name="avg_fat">సగటు కొవ్వు</string>
+    <string name="avg_clr">సగటు C L R</string>
+    <string name="total">మొత్తం</string>
+    <string name="milk_ltr">పాలు లీటరు</string>
+    <string name="ltr">లీటరు</string>
+    <string name="density">సాంద్రత</string>
+    <string name="ghee">నెయ్యి</string>
+    <string name="milk_kg">పాలు (KG)</string>
+    <string name="ghee_amout">నెయ్యి ధర</string>
+    <string name="powder">పొడి</string>
+    <string name="powder_amount">పౌడర్ ధర</string>
+    <string name="total_amount">మొత్తం మొత్తం</string>
+
+</resources>

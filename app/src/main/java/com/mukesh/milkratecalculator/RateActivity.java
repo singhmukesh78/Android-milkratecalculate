@@ -1,8 +1,17 @@
 package com.mukesh.milkratecalculator;
 
+import android.content.ActivityNotFoundException;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.pdf.PdfDocument;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -10,8 +19,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class RateActivity extends AppCompatActivity {
 
@@ -30,6 +47,9 @@ public class RateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         setTitle("Rate FAT, SNF Method");
 
         etStRate = findViewById(R.id.etStRate);
@@ -57,7 +77,6 @@ public class RateActivity extends AppCompatActivity {
         }
 
         etStRate.requestFocus();
-        numbermovetonext();
     }
 
     public void btnCalculateRate(View view) {
@@ -100,6 +119,17 @@ public class RateActivity extends AppCompatActivity {
             Fat = Float.parseFloat(fat);
             Snf = Float.parseFloat(snf);
 
+            if (Fat > 13f) {
+                etFat.setError("FAT cannot be greater than 13");
+                etFat.requestFocus();
+                return;
+            }
+            if (Snf > 12f) {
+                etSnf.setError("SNF cannot be greater than 12");
+                etSnf.requestFocus();
+                return;
+            }
+
             CalcRate = (float) ((((StRate * fsRatio / 100) / 6.50) * Fat) + (((StRate * (100 - fsRatio) / 100 / 9.00) * Snf)));
             CalcRate = Float.parseFloat(f.format(CalcRate));
 
@@ -116,14 +146,12 @@ public class RateActivity extends AppCompatActivity {
             TotalAmount = Float.toString(Amount);
             tvAmt.setText(TotalAmount);
 
-            Toast.makeText(RateActivity.this, "Rate Calculated!", Toast.LENGTH_SHORT).show();
         } catch (NumberFormatException e) {
             Toast.makeText(this, "Please enter valid numeric values", Toast.LENGTH_SHORT).show();
         }
     }
 
     public void btnOnClickClear(View view) {
-        etStRate.setText("");
         etQty.setText("");
         etFat.setText("");
         etSnf.setText("");
@@ -133,35 +161,207 @@ public class RateActivity extends AppCompatActivity {
         etFat.requestFocus();
     }
 
-    private void numbermovetonext() {
-        etFat.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+    public void downloadPdfReport(View view) {
+        String stRateVal = etStRate.getText().toString().trim();
+        String fatVal = etFat.getText().toString().trim();
+        String snfVal = etSnf.getText().toString().trim();
+        String qtyVal = etQty.getText().toString().trim();
+        String rateVal = tvRate.getText().toString().trim();
+        String clrVal = tvClr.getText().toString().trim();
+        String amtVal = tvAmt.getText().toString().trim();
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.toString().trim().length() == 3) {
-                    etSnf.requestFocus();
+        String ratioStr = "50:50";
+        if (radioGroupRatio != null) {
+            int checkedId = radioGroupRatio.getCheckedRadioButtonId();
+            if (checkedId == R.id.radio5248) {
+                ratioStr = "52:48";
+            } else if (checkedId == R.id.radio6040) {
+                ratioStr = "60:40";
+            } else {
+                ratioStr = "50:50";
+            }
+        }
+
+        if (stRateVal.isEmpty() || fatVal.isEmpty() || snfVal.isEmpty()) {
+            Toast.makeText(this, "Please enter Standard Rate, FAT and SNF first", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        PdfDocument pdfDocument = new PdfDocument();
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(595, 842, 1).create();
+        PdfDocument.Page page = pdfDocument.startPage(pageInfo);
+        Canvas canvas = page.getCanvas();
+
+        Paint paint = new Paint();
+        paint.setAntiAlias(true);
+
+        int startX = 50;
+        int startY = 50;
+        int tableWidth = 495;
+
+        // Title
+        paint.setFakeBoldText(true);
+        paint.setTextSize(20);
+        paint.setColor(Color.parseColor("#00796B"));
+        canvas.drawText("Milk Rate Calculation Report", startX, startY, paint);
+
+        startY += 20;
+        paint.setFakeBoldText(false);
+        paint.setTextSize(11);
+        paint.setColor(Color.GRAY);
+        canvas.drawText("Generated on: " + new SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.getDefault()).format(new Date()), startX, startY, paint);
+
+        startY += 30;
+
+        int givenDataColor = Color.parseColor("#4F46E5");
+
+        // Table 1: Entered Parameters
+        startY = drawTable(canvas, paint, startX, startY, tableWidth, "1. Entered Parameters", new String[][]{
+                {"Parameter", "Value"},
+                {"Standard Rate", "₹ " + stRateVal},
+                {"FAT", fatVal + " %"},
+                {"SNF", snfVal + " %"},
+                {"Quantity", (qtyVal.isEmpty() ? "0" : qtyVal) + " kg"}
+        }, new int[]{1, 2, 3, 4}, new int[]{Color.parseColor("#0F172A"), givenDataColor, givenDataColor, givenDataColor});
+
+        startY += 16;
+
+        // Table 2: Selected Options
+        startY = drawTable(canvas, paint, startX, startY, tableWidth, "2. Selected Options", new String[][]{
+                {"Option", "Selected Value"},
+                {"FAT & SNF Ratio", ratioStr}
+        }, new int[]{1}, new int[]{givenDataColor});
+
+        startY += 16;
+
+        // Table 3: Calculation Results
+        startY = drawTable(canvas, paint, startX, startY, tableWidth, "3. Calculation Results", new String[][]{
+                {"Result Metric", "Value"},
+                {"Calculated Rate", "₹ " + (rateVal.isEmpty() ? "0.00" : rateVal) + " / liter"},
+                {"CLR", (clrVal.isEmpty() ? "0.0" : clrVal)},
+                {"Total Amount", "₹ " + (amtVal.isEmpty() ? "0.00" : amtVal)}
+        }, new int[]{1, 3}, new int[]{Color.parseColor("#0284C7"), Color.parseColor("#16A34A")});
+
+        pdfDocument.finishPage(page);
+
+        try {
+            OutputStream fos;
+            Uri pdfUri;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                ContentValues values = new ContentValues();
+                values.put(MediaStore.MediaColumns.DISPLAY_NAME, "MilkRateReport_" + System.currentTimeMillis() + ".pdf");
+                values.put(MediaStore.MediaColumns.MIME_TYPE, "application/pdf");
+                values.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOCUMENTS);
+                values.put(MediaStore.MediaColumns.IS_PENDING, 1);
+
+                Uri collection = MediaStore.Files.getContentUri("external");
+                pdfUri = getContentResolver().insert(collection, values);
+                if (pdfUri != null) {
+                    fos = getContentResolver().openOutputStream(pdfUri);
+                    pdfDocument.writeTo(fos);
+                    if (fos != null) {
+                        fos.close();
+                    }
+                    pdfDocument.close();
+
+                    values.clear();
+                    values.put(MediaStore.MediaColumns.IS_PENDING, 0);
+                    getContentResolver().update(pdfUri, values, null, null);
+                } else {
+                    throw new IOException("Failed to create MediaStore entry.");
                 }
+            } else {
+                File documentsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+                if (!documentsDir.exists()) {
+                    documentsDir.mkdirs();
+                }
+                File file = new File(documentsDir, "MilkRateReport_" + System.currentTimeMillis() + ".pdf");
+                fos = new FileOutputStream(file);
+                pdfDocument.writeTo(fos);
+                if (fos != null) {
+                    fos.close();
+                }
+                pdfDocument.close();
+                pdfUri = FileProvider.getUriForFile(this, getPackageName() + ".fileprovider", file);
             }
 
-            @Override
-            public void afterTextChanged(Editable editable) {}
-        });
+            Toast.makeText(this, "PDF saved to Documents folder", Toast.LENGTH_SHORT).show();
 
-        etSnf.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(pdfUri, "application/pdf");
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            try {
+                startActivity(intent);
+            } catch (ActivityNotFoundException e) {
+                Toast.makeText(this, "No PDF viewer application found", Toast.LENGTH_SHORT).show();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Error saving PDF: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            pdfDocument.close();
+        }
+    }
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.toString().trim().length() == 3) {
-                    etQty.requestFocus();
-                }
+    private int drawTable(Canvas canvas, Paint paint, int startX, int startY, int tableWidth, String title, String[][] rows, int[] highlightRows, int[] highlightColors) {
+        paint.setFakeBoldText(true);
+        paint.setTextSize(13);
+        paint.setColor(Color.parseColor("#00796B"));
+        canvas.drawText(title, startX, startY, paint);
+        startY += 8;
+
+        int rowHeight = 24;
+        int col1Width = tableWidth / 2;
+
+        Paint linePaint = new Paint();
+        linePaint.setColor(Color.parseColor("#E2E8F0"));
+        linePaint.setStrokeWidth(1);
+
+        Paint headerBgPaint = new Paint();
+        headerBgPaint.setColor(Color.parseColor("#E2E8F0"));
+
+        Paint altRowPaint = new Paint();
+        altRowPaint.setColor(Color.parseColor("#F8FAFC"));
+
+        Paint cellTextPaint = new Paint();
+        cellTextPaint.setAntiAlias(true);
+        cellTextPaint.setTextSize(11);
+
+        for (int i = 0; i < rows.length; i++) {
+            int top = startY + (i * rowHeight);
+            int bottom = top + rowHeight;
+
+            if (i == 0) {
+                canvas.drawRect(startX, top, startX + tableWidth, bottom, headerBgPaint);
+            } else if (i % 2 == 1) {
+                canvas.drawRect(startX, top, startX + tableWidth, bottom, altRowPaint);
             }
 
-            @Override
-            public void afterTextChanged(Editable editable) {}
-        });
+            canvas.drawRect(startX, top, startX + tableWidth, bottom, linePaint);
+            canvas.drawLine(startX + col1Width, top, startX + col1Width, bottom, linePaint);
+
+            if (i == 0) {
+                cellTextPaint.setFakeBoldText(true);
+                cellTextPaint.setColor(Color.parseColor("#0F172A"));
+            } else {
+                boolean isHighlighted = false;
+                int customColor = Color.parseColor("#334155");
+                if (highlightRows != null && highlightColors != null) {
+                    for (int h = 0; h < highlightRows.length; h++) {
+                        if (highlightRows[h] == i) {
+                            isHighlighted = true;
+                            customColor = highlightColors[h];
+                            break;
+                        }
+                    }
+                }
+                cellTextPaint.setFakeBoldText(isHighlighted);
+                cellTextPaint.setColor(customColor);
+            }
+
+            canvas.drawText(rows[i][0], startX + 12, top + 16, cellTextPaint);
+            canvas.drawText(rows[i][1], startX + col1Width + 12, top + 16, cellTextPaint);
+        }
+
+        return startY + (rows.length * rowHeight);
     }
 }

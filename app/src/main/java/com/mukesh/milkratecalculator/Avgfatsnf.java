@@ -7,10 +7,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.Spinner;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +17,8 @@ import com.mukesh.milkratecalculator.databinding.ActivityRateBinding;
 import java.text.DecimalFormat;
 import java.util.Date;
 
-public class Avgfatsnf extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
-    Spinner spiner;
+public class Avgfatsnf extends AppCompatActivity {
+    private RadioGroup radioGroupRatio;
     private EditText etQty1, etQty2, etQty3, etQty4, etQty5, etQty6, etQty7, etQty8, etQty9, etQty10, etStRate;
     private EditText etFat1, etFat2, etFat3, etFat4, etFat5, etFat6, etFat7, etFat8, etFat9, etFat10;
     private EditText etSnf1, etSnf2, etSnf3, etSnf4, etSnf5, etSnf6, etSnf7, etSnf8, etSnf9, etSnf10;
@@ -136,12 +134,21 @@ public class Avgfatsnf extends AppCompatActivity implements AdapterView.OnItemSe
         tvRs9 = findViewById(R.id.tvRs9);
         tvRs10 = findViewById(R.id.tvRs10);
 
-        spiner = findViewById(R.id.ratioAvg);
-
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.fat_ratio, R.layout.spiner_color_layout);
-        adapter.setDropDownViewResource(R.layout.spiner_dropdown_layout);
-        spiner.setAdapter(adapter);
-        spiner.setOnItemSelectedListener(this);
+        radioGroupRatio = findViewById(R.id.radioGroupRatio);
+        if (radioGroupRatio != null) {
+            radioGroupRatio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    if (checkedId == R.id.radio5248) {
+                        fsRatio = 52f;
+                    } else if (checkedId == R.id.radio6040) {
+                        fsRatio = 60f;
+                    } else {
+                        fsRatio = 50f;
+                    }
+                }
+            });
+        }
 
         numbermovetonext();
     }
@@ -215,6 +222,17 @@ public class Avgfatsnf extends AppCompatActivity implements AdapterView.OnItemSe
     public void btnCalculateAvgFatSnf(View view) {
 
         stRate = etStRate.getText().toString().trim();
+
+        if (radioGroupRatio != null) {
+            int checkedId = radioGroupRatio.getCheckedRadioButtonId();
+            if (checkedId == R.id.radio5248) {
+                fsRatio = 52f;
+            } else if (checkedId == R.id.radio6040) {
+                fsRatio = 60f;
+            } else {
+                fsRatio = 50f;
+            }
+        }
 
         Qty1  = etQty1.getText().toString();
         Qty2  = etQty2.getText().toString();
@@ -496,24 +514,7 @@ public class Avgfatsnf extends AppCompatActivity implements AdapterView.OnItemSe
         tvRate.setText(Rate);
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String text = adapterView.getItemAtPosition(i).toString();
-        if(i == 0)
-            fsRatio = 50;
-        if(i == 1)
-            fsRatio = 52;
-        if(i == 2)
-            fsRatio = 60;
 
-        //Toast.makeText(adapterView.getContext(), text,Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-        fsRatio = 50;
-    }
 
 
     private void numbermovetonext() {

@@ -39,7 +39,7 @@ public class splashActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                startActivity(new Intent(splashActivity.this, RateActivity.class));
+                startActivity(new Intent(splashActivity.this, dashboard.class));
                 finish();
             }
 

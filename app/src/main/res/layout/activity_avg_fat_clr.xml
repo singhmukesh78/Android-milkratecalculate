@@ -12,16 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="8dp">
 
         <!-- Header Card -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="6dp"
             app:cardBackgroundColor="@color/teal_700"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
             app:strokeWidth="0dp">
 
             <LinearLayout
@@ -29,19 +29,20 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="16dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:contentDescription="@null"
                     android:src="@drawable/average_1" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -49,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:text="Average FAT &amp; CLR"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
 
@@ -57,8 +58,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Batch Milk Collection Calculator"
-                        android:textColor="#B2DFDB"
-                        android:textSize="12sp"
+                        android:textColor="#E0F2F1"
+                        android:textSize="11sp"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
             </LinearLayout>
@@ -68,10 +69,10 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="6dp"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="3dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
             app:strokeColor="#E2E8F0"
             app:strokeWidth="1dp">
 
@@ -79,184 +80,287 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
-                <!-- Top Row: Standard Rate & Shift -->
+                <!-- Top Row: Standard Rate & Shift Badge -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="6dp"
                     android:baselineAligned="false"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="6dp"
                         android:layout_weight="1"
                         android:hint="@string/standard_rate"
-                        app:boxCornerRadiusBottomEnd="12dp"
-                        app:boxCornerRadiusBottomStart="12dp"
-                        app:boxCornerRadiusTopEnd="12dp"
-                        app:boxCornerRadiusTopStart="12dp"
-                        app:boxStrokeColor="#242F4D"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxStrokeColor="@color/teal_700"
                         app:prefixText="₹"
-                        app:prefixTextColor="#242F4D">
+                        app:prefixTextColor="@color/teal_700">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etStRateAv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="numberDecimal"
-                            android:textColor="#000000"
-                            android:textSize="15sp"
+                            android:textColor="#1E293B"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <!-- Date & Shift Pill -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#E0F2F1"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp">
 
                         <TextView
                             android:id="@+id/tvDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Date"
-                            android:textColor="@color/teal_700"
-                            android:textSize="12sp"
+                            android:text="@string/date"
+                            android:textColor="#004D40"
+                            android:textSize="11sp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvShift"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Shift"
-                            android:textColor="@color/teal_700"
-                            android:textSize="12sp"
+                            android:text="@string/shift"
+                            android:textColor="#004D40"
+                            android:textSize="11sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Batch Totals & Averages -->
+                <!-- Batch Summary Dashboard -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#F8FAFC"
-                    android:orientation="vertical"
-                    android:padding="12dp">
+                    android:layout_marginBottom="4dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
 
+                    <!-- Stat 1: Total Milk -->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="6dp"
-                        android:orientation="horizontal">
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="#F1F5F9"
+                        android:orientation="vertical"
+                        android:padding="6dp">
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/total_milk"
-                            android:textColor="#475569"
-                            android:textSize="13sp" />
+                            android:textColor="#64748B"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvTMlk"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0.00"
-                            android:textColor="@color/teal_700"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textColor="#0F172A"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
                     </LinearLayout>
 
+                    <!-- Stat 2: Avg Rate -->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="6dp"
-                        android:orientation="horizontal">
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:background="#F1F5F9"
+                        android:orientation="vertical"
+                        android:padding="6dp">
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:text="@string/avg_rate"
+                            android:textColor="#64748B"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ "
+                                android:textColor="#0F172A"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tvRate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textColor="#0F172A"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <!-- Stat 3: Avg FAT -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="#F1F5F9"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="@string/avg_fat"
-                            android:textColor="#475569"
-                            android:textSize="13sp" />
+                            android:textColor="#64748B"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvAvgFat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0.00"
-                            android:textColor="@color/teal_700"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textColor="#0F172A"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
                     </LinearLayout>
 
+                    <!-- Stat 4: Avg CLR -->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="6dp"
-                        android:orientation="horizontal">
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:background="#F1F5F9"
+                        android:orientation="vertical"
+                        android:padding="6dp">
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/avg_clr"
-                            android:textColor="#475569"
-                            android:textSize="13sp" />
+                            android:textColor="#64748B"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvAvgClr"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0.00"
-                            android:textColor="@color/teal_700"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textColor="#0F172A"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
                     </LinearLayout>
+                </LinearLayout>
+
+                <!-- Stat 5: Highlighted Total Amount Banner -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    app:cardBackgroundColor="#E0F2F1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/teal_700"
+                    app:strokeWidth="1.5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/total"
-                            android:textColor="#475569"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/tvAvgTAmt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="0.00"
-                            android:textColor="@color/teal_700"
+                            android:text="@string/total_amount"
+                            android:textColor="#004D40"
                             android:textSize="14sp"
                             android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ "
+                                android:textColor="#004D40"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tvAvgTAmt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textColor="#004D40"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- 10 Rows Input Form Card -->
+        <!-- 5 Rows Input Form Card -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="6dp"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="3dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
             app:strokeColor="#E2E8F0"
             app:strokeWidth="1dp">
 
@@ -264,15 +368,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="Batch Entries (1 - 10)"
+                    android:layout_marginBottom="6dp"
+                    android:text="Batch Entries (1 - 5)"
                     android:textColor="@color/teal_700"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
@@ -280,7 +384,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
                     android:paddingHorizontal="4dp">
 
@@ -289,7 +394,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.2"
                         android:text="QTY (L)"
-                        android:textColor="#5A6A85"
+                        android:textColor="#64748B"
                         android:textSize="11sp"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
@@ -299,7 +404,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.2"
                         android:text="FAT %"
-                        android:textColor="#5A6A85"
+                        android:textColor="#64748B"
                         android:textSize="11sp"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
@@ -309,7 +414,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.2"
                         android:text="CLR"
-                        android:textColor="#5A6A85"
+                        android:textColor="#64748B"
                         android:textSize="11sp"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
@@ -320,7 +425,7 @@
                         android:layout_weight="1.1"
                         android:gravity="center"
                         android:text="Rate"
-                        android:textColor="#5A6A85"
+                        android:textColor="#64748B"
                         android:textSize="11sp"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
@@ -331,143 +436,135 @@
                         android:layout_weight="1.3"
                         android:gravity="end"
                         android:text="Total (₹)"
-                        android:textColor="#5A6A85"
+                        android:textColor="#64748B"
                         android:textSize="11sp"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <!-- Row 1 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty1" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat1" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr1" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate1" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs1" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:layout_marginBottom="4dp">
+                    <EditText android:id="@+id/etQty1" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginEnd="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etFat1" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etClr1" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginStart="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <TextView android:id="@+id/tvRate1" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="center" android:textColor="#475569" tools:ignore="HardcodedText" />
+                    <TextView android:id="@+id/tvRs1" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="end" android:textColor="#0F172A" android:textStyle="bold" tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <!-- Row 2 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty2" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat2" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr2" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate2" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs2" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:layout_marginBottom="4dp">
+                    <EditText android:id="@+id/etQty2" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginEnd="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etFat2" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etClr2" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginStart="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <TextView android:id="@+id/tvRate2" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="center" android:textColor="#475569" tools:ignore="HardcodedText" />
+                    <TextView android:id="@+id/tvRs2" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="end" android:textColor="#0F172A" android:textStyle="bold" tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <!-- Row 3 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty3" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat3" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr3" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate3" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs3" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:layout_marginBottom="4dp">
+                    <EditText android:id="@+id/etQty3" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginEnd="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etFat3" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etClr3" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginStart="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <TextView android:id="@+id/tvRate3" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="center" android:textColor="#475569" tools:ignore="HardcodedText" />
+                    <TextView android:id="@+id/tvRs3" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="end" android:textColor="#0F172A" android:textStyle="bold" tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <!-- Row 4 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty4" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat4" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr4" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate4" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs4" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:layout_marginBottom="4dp">
+                    <EditText android:id="@+id/etQty4" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginEnd="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etFat4" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etClr4" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginStart="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <TextView android:id="@+id/tvRate4" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="center" android:textColor="#475569" tools:ignore="HardcodedText" />
+                    <TextView android:id="@+id/tvRs4" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="end" android:textColor="#0F172A" android:textStyle="bold" tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <!-- Row 5 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty5" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat5" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr5" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate5" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs5" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Row 6 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty6" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat6" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr6" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate6" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs6" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Row 7 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty7" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat7" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr7" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate7" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs7" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Row 8 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty8" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat8" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr8" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate8" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs8" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Row 9 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
-                    <EditText android:id="@+id/etQty9" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat9" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr9" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate9" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs9" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Row 10 -->
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-                    <EditText android:id="@+id/etQty10" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginEnd="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etFat10" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <EditText android:id="@+id/etClr10" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="8dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#000000" android:textSize="13sp" android:textStyle="bold" />
-                    <TextView android:id="@+id/tvRate10" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="center" android:textColor="#212121" />
-                    <TextView android:id="@+id/tvRs10" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="12sp" android:gravity="end" android:textColor="#212121" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+                    <EditText android:id="@+id/etQty5" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginEnd="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/ltr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etFat5" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginHorizontal="2dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/fat" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <EditText android:id="@+id/etClr5" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="36dp" android:layout_marginStart="3dp" android:background="@drawable/batch_input_bg" android:paddingHorizontal="6dp" android:hint="@string/clr" android:inputType="numberDecimal" android:textColor="#1E293B" android:textSize="12sp" android:textStyle="bold" android:autofillHints="none" />
+                    <TextView android:id="@+id/tvRate5" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="center" android:textColor="#475569" tools:ignore="HardcodedText" />
+                    <TextView android:id="@+id/tvRs5" android:layout_width="0dp" android:layout_weight="1.3" android:layout_height="wrap_content" android:text="0.00" android:textSize="11sp" android:gravity="end" android:textColor="#0F172A" android:textStyle="bold" tools:ignore="HardcodedText" />
                 </LinearLayout>
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Action Buttons -->
+        <!-- Action Buttons & PDF Report -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btCalculate"
                 android:layout_width="0dp"
-                android:layout_height="54dp"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1.2"
                 android:onClick="btnCalculateAvgFatClr"
                 android:text="@string/calculate"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:backgroundTint="@color/teal_700"
-                app:cornerRadius="12dp"
-                app:elevation="3dp" />
+                app:cornerRadius="10dp"
+                app:elevation="2dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btClr"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="0dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="8dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
                 android:layout_weight="1"
                 android:onClick="btnOnClickClear"
                 android:text="@string/clear"
                 android:textColor="@color/teal_700"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
-                app:cornerRadius="12dp"
+                app:cornerRadius="10dp"
                 app:strokeColor="@color/teal_700"
                 app:strokeWidth="1.5dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btDownloadReport"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:onClick="downloadPdfReport"
+                android:text="PDF"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/teal_700"
+                app:cornerRadius="10dp"
+                app:elevation="2dp"
+                app:icon="@android:drawable/ic_menu_save"
+                app:iconGravity="start"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
+
+        <!-- AdMob Banner Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#E2E8F0"
+            app:strokeWidth="1dp">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:adSize="BANNER"
+                app:adUnitId="@string/banner_ad_unit_id_Test" />
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

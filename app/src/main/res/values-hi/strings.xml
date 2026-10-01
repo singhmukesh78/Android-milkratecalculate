@@ -14,16 +14,15 @@
     <string name="clear">"हटाएं "</string>
     <string name="rate">रेट</string>
     <string name="amount">धनराशि</string>
-    <string name="clr">सीलार</string>
+    <string name="clr">सीएलआर</string>
     <string name="rate_fat_snf">रेट फैट/एस.एन.एफ</string>
-    <string name="rate_gurber">"रेट गर्बर "</string>
+    <string name="rate_gurber">"गर्बर विधि"</string>
     <string name="date">दिनांक</string>
     <string name="shift">पाली</string>
     <string name="avg_rate">औ. रेट</string>
     <string name="total_milk">कुल दूध</string>
     <string name="avg_fat">औ. फैट</string>
     <string name="avg_clr">औ. सीएलआर</string>
-    <string name="total">टोटल</string>
     <string name="milk_ltr">दूध ली.</string>
     <string name="ltr">लीटर</string>
     <string name="ghee">घी</string>
@@ -32,7 +31,7 @@
     <string name="ltr_kg">लीटर->किग्रा</string>
     <string name="avg_fat_snf">औ. फैट/एस.एन.एफ</string>
     <string name="avg_fat_clr">औ. फैट/सीएलआर</string>
-    <string name="about_milk">दूध के बारे में</string>
+    <string name="about_milk">दूध के बारे में जाने</string>
     <string name="what_is_milk_cob">मिल्क सीओबी क्या है?</string>
     <string name="what_are_the_standards_for_milk_testing">दूध परीक्षण के मानक क्या हैं?</string>
     <string name="what_is_the_acidity_or_ph_of_milk">दूध की अम्लता या पीएच क्या है?</string>

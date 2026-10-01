@@ -20,6 +20,9 @@ public class WeightConverter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weight_converter);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         setTitle("Weight Converter");
         etLtr = findViewById(R.id.etLtr);
         etDensity = findViewById(R.id.etDensity);

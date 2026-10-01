@@ -11,6 +11,6 @@
         android:toYScale="1.0"
         android:toXScale="1.0"
         android:duration="2000"
-        android:pivotX="50%"
-        android:pivotY="50%"/>
+        android:pivotX="100%"
+        android:pivotY="100%"/>
 </set>

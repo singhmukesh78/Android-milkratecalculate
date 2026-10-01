@@ -132,7 +132,7 @@
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-        <!-- Row 2: Weight Converter & Avg FAT/SNF -->
+        <!-- Row 2: Avg FAT/SNF & Avg FAT/CLR -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -140,49 +140,11 @@
             android:baselineAligned="false"
             android:orientation="horizontal">
 
-            <!-- Card 3: Weight Converter -->
+            <!-- Card 3: Avg FAT/SNF -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="130dp"
                 android:layout_marginEnd="6dp"
-                android:layout_weight="1"
-                android:onClick="btnConvKgToLtrClick"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                app:strokeColor="#E2E8F0"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="12dp">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginBottom="8dp"
-                        android:contentDescription="@null"
-                        android:src="@drawable/weighing_scale" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/ltr_kg"
-                        android:textColor="#1E293B"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Card 4: Avg FAT/SNF -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:onClick="btnCalAvgFatSnfClick"
                 app:cardBackgroundColor="@color/white"
@@ -215,21 +177,12 @@
                         android:textStyle="bold" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
 
-        <!-- Row 3: Avg FAT/CLR & About Milk -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <!-- Card 5: Avg FAT/CLR -->
+            <!-- Card 4: Avg FAT/CLR -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="130dp"
-                android:layout_marginEnd="6dp"
+                android:layout_marginStart="6dp"
                 android:layout_weight="1"
                 android:onClick="btnCalAvgFatClrClick"
                 app:cardBackgroundColor="@color/white"
@@ -257,6 +210,53 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/avg_fat_clr"
+                        android:textColor="#1E293B"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Row 3: Weight Converter & About Milk -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <!-- Card 5: Weight Converter -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:onClick="btnConvKgToLtrClick"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/weighing_scale" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/ltr_kg"
                         android:textColor="#1E293B"
                         android:textSize="13sp"
                         android:textStyle="bold" />

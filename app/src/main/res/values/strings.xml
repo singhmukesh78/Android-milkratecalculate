@@ -16,7 +16,7 @@
     <string name="amount">Amount</string>
     <string name="clr">C L R</string>
     <string name="rate_fat_snf">Rate FAT/SNF</string>
-    <string name="rate_gurber">Rate Gurber</string>
+    <string name="rate_gurber">Gurber Method</string>
     <string name="ltr_kg">Ltr-->Kg</string>
     <string name="avg_fat_snf">Avg FAT/SNF</string>
     <string name="avg_fat_clr">Avg FAT/CLR</string>
@@ -34,7 +34,6 @@
     <string name="total_milk">Total Milk:</string>
     <string name="avg_fat">Avg FAT:</string>
     <string name="avg_clr">Avg CLR:</string>
-    <string name="total">Total:</string>
     <string name="milk_ltr">Milk Ltr</string>
     <string name="ltr">Liter</string>
     <string name="density">Density</string>

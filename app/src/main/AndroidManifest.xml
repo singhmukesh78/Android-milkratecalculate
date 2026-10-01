@@ -8,7 +8,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/milkmancountingmoney"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/milkmancountingmoney"
         android:supportsRtl="true"
         android:theme="@style/Theme.MilkRateCalculator"
         tools:targetApi="31">
@@ -74,6 +74,7 @@
         </activity>
         <activity
             android:name=".splashActivity"
+            android:theme="@style/Theme.MilkRateCalculator.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

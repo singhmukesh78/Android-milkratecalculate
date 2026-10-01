@@ -21,6 +21,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -51,6 +55,13 @@ public class RateActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
         setTitle("Rate FAT, SNF Method");
+
+        AdView adView = findViewById(R.id.adView);
+        if (adView != null) {
+            MobileAds.initialize(this);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            adView.loadAd(adRequest);
+        }
 
         etStRate = findViewById(R.id.etStRate);
         etQty = findViewById(R.id.etQty);

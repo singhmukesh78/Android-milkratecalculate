@@ -250,7 +250,7 @@ public class RateClrMethod extends AppCompatActivity {
         paint.setFakeBoldText(true);
         paint.setTextSize(20);
         paint.setColor(Color.parseColor("#00796B"));
-        canvas.drawText("Milk Rate Report (FAT & CLR Method)", startX, startY, paint);
+        canvas.drawText("Lacto Master Report (FAT & CLR Method)", startX, startY, paint);
 
         startY += 20;
         paint.setFakeBoldText(false);

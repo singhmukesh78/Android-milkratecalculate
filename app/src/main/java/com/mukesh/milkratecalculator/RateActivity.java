@@ -214,7 +214,7 @@ public class RateActivity extends AppCompatActivity {
         paint.setFakeBoldText(true);
         paint.setTextSize(20);
         paint.setColor(Color.parseColor("#00796B"));
-        canvas.drawText("Milk Rate Calculation Report", startX, startY, paint);
+        canvas.drawText("Lacto Master Calculation Report", startX, startY, paint);
 
         startY += 20;
         paint.setFakeBoldText(false);

@@ -22,18 +22,7 @@
             app:cardBackgroundColor="@color/teal_700"
             app:cardCornerRadius="18dp"
             app:cardElevation="4dp"
-            app:strokeWidth="0dp">
-
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/topToolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@android:color/transparent"
-                app:title="Milk Rate Calculator"
-                app:titleTextColor="@color/white"
-                app:subtitle="Dashboard"
-                app:subtitleTextColor="#B2DFDB" />
-        </com.google.android.material.card.MaterialCardView>
+            app:strokeWidth="0dp"/>
 
         <!-- Tools Section Title -->
         <TextView

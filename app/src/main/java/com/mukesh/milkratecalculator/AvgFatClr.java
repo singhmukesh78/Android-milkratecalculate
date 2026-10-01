@@ -321,7 +321,7 @@ public class AvgFatClr extends AppCompatActivity {
         paint.setFakeBoldText(true);
         paint.setTextSize(20);
         paint.setColor(Color.parseColor("#00796B"));
-        canvas.drawText("Batch Milk Collection Report (FAT & CLR)", startX, startY, paint);
+        canvas.drawText("Lacto Master Batch Report (FAT & CLR)", startX, startY, paint);
 
         startY += 20;
         paint.setFakeBoldText(false);

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lacto Master</string>
+    <string name="avg_snf">ਔਸਤ SNF</string>
     <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
     <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
     <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
@@ -20,13 +21,12 @@
     <string name="total_milk">ਕੁੱਲ ਦੁੱਧ:</string>
     <string name="avg_fat">ਔਸਤ ਚਰਬੀ</string>
     <string name="avg_clr">ਔਸਤ C L R</string>
-    <string name="total">ਕੁੱਲ</string>
     <string name="milk_ltr">ਦੁੱਧ ਲੀਟਰ</string>
     <string name="ltr">ਲਿਟਰ</string>
     <string name="ghee">ਘੀ</string>
     <string name="density">ਘਣਤਾ</string>
     <string name="clr">ਸੀ ਐਲ ਆਰ</string>
-    <string name="rate_fat_snf">ਦਰ ਚਰਬੀ / S N F</string>
+    <string name="rate_fat_snf">ਚਰਬੀ &amp; SNF ਵਿਧੀ</string>
     <string name="rate_gurber">ਦਰਜਾ ਗੁਰਬਰ</string>
     <string name="ltr_kg">ਲਿਟਰ-> ਕਿਲੋਗ੍ਰਾਮ</string>
     <string name="avg_fat_snf">ਔਸਤ FAT/SNF</string>
@@ -44,4 +44,18 @@
     <string name="powder">ਪਾਊਡਰ</string>
     <string name="powder_amount">ਪਾਊਡਰ ਦੀ ਕੀਮਤ</string>
     <string name="total_amount">ਕੁੱਲ ਮਾਤਰਾ</string>
+    <string name="login_title">ਸਾਈਨ-ਇਨ ਵਿਧੀ ਚੁਣੋ</string>
+    <string name="login_subtitle">ਆਪਣੀ ਡੇਅري ਅਤੇ ਦੁੱਧ ਦੀਆਂ ਦਰਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ</string>
+    <string name="continue_google">Google ਨਾਲ ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="continue_facebook">Facebook ਨਾਲ ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="continue_instagram">Instagram ਨਾਲ ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="login_terms">ਜਾਰੀ ਰੱਖ ਕੇ, ਤੁਸੀਂ ਲੈਕਟੋ ਮਾਸਟਰ ਦੀਆਂ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਅਤੇ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਨਾਲ ਸਹਿਮਤ ਹੋ</string>
+    <string name="milk_standards_title">ਦੁੱਧ ਦੀ ਕਿਸਮ ਦੁਆਰਾ ਚਰਬੀ ਅਤੇ SNF ਮਿਆਰ</string>
+    <string name="milk_standards_answer" translatable="true">ਵੱਖ-ਵੱਖ ਦੁੱਧ ਦੀਆਂ ਕਿਸਮਾਂ ਲਈ ਮਿਆਰੀ ਰਚਨਾ ਦੀਆਂ ਲੋੜਾਂ: - ਗਾਂ ਦਾ ਦੁੱਧ: 3.5% ਚਰਬੀ, 8.5% SNF - ਮੱਝ ਦਾ ਦੁੱਧ: 6.0% ਚਰਬੀ, 9.0% SNF - ਟੋਨਡ ਦੁੱਧ: 3.0% ਚਰਬੀ, 8.5% SNF - ਡਬਲ ਟੋਨਡ ਦੁੱਧ: 1.5% ਚਰਬੀ, 9.0% SNF - ਸਟੈਂਡਰਡਾਈਜ਼ਡ ਦੁੱਧ: 4.5% ਚਰਬੀ, 8.5% SNF</string>
+    <string name="adulteration_title">ਸੁਰੱਖਿਆ ਅਤੇ ਮਿਲਾਵਟ ਸੀਮਾਵਾਂ</string>
+    <string name="adulteration_answer" translatable="true">ਦੁੱਧ ਦੀ ਸੁਰੱਖਿਆ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਅਤੇ ਹਾਨੀਕਾਰਕ ਮਿਲਾਵਟ ਤੋਂ ਮੁਕਤ ਰੱਖਣ ਲਈ ਸਖਤ ਗੁਣਵੱਤਾ ਮਿਆਰ.</string>
+    <string name="contaminant_title">ਸੁਰੱਖਿਆ ਅਤੇ ਦੂਸ਼ਿਤ ਸੀਮਾਵਾਂ</string>
+    <string name="contaminant_answer" translatable="true">ਰੈਗੂਲੇਟਰੀ ਅਥਾਰਟੀ ਡੇਅਰੀ ਸੁਰੱਖਿਆ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਸਖਤ ਸੀਮਾਵਾਂ ਲਾਗੂ ਕਰਦੀਆਂ ਹਨ.</string>
+    <string name="fssai_products_title">ਮੁੱਖ ਦੁੱਧ ਉਤਪਾਦਾਂ ਲਈ ਮਿਆਰ (FSSAI)</string>
+    <string name="fssai_products_answer" translatable="true">FSSAI ਨਿਯਮਾਂ ਤਹਿਤ, ਵੱਖ-ਵੱਖ ਡੇਅਰੀ ਉਤਪਾਦਾਂ ਨੂੰ ਸਖਤ ਮਿਆਰਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
 </resources>

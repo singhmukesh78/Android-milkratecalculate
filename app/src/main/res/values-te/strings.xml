@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lacto Master</string>
+    <string name="avg_snf">సరా ఎస్న్ఎఫ్</string>
     <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
     <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
     <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
@@ -15,11 +16,11 @@
     <string name="rate">రేటు</string>
     <string name="amount">మొత్తం</string>
     <string name="clr">సి ఎల్ ఆర్</string>
-    <string name="rate_fat_snf">కొవ్వు రేటు / S N F</string>
+    <string name="rate_fat_snf">ఫాట్ &amp; ఎస్న్ఎఫ్ పద్ధతి</string>
     <string name="rate_gurber">గర్బర్‌ని రేట్ చేయండి</string>
     <string name="ltr_kg">లీటరు-> కేజీ</string>
-    <string name="avg_fat_snf">సగటు FAT/SNF</string>
-    <string name="avg_fat_clr">సగటు FAT/CLR</string>
+    <string name="avg_fat_snf">సగటు ఫాట్ &amp; ఎస్న్ఎఫ్</string>
+    <string name="avg_fat_clr">సగటు ఫాట్ &amp;  సిఎల్ఆర్</string>
     <string name="about_milk">పాలు గురించి</string>
     <string name="what_is_milk_cob">మిల్క్ COB అంటే ఏమిటి?</string>
     <string name="what_are_the_standards_for_milk_testing">పాల పరీక్ష ప్రమాణాలు ఏమిటి?</string>
@@ -29,12 +30,11 @@
     <string name="what_acid_is_in_milk">పాలలో ఏ యాసిడ్ ఉంటుంది?</string>
     <string name="what_is_a1_and_a2_milk">A1 మరియు A2 పాలు అంటే ఏమిటి?</string>
     <string name="date">తేదీ:</string>
-    <string name="shift">మార్పు</string>
+    <string name="shift">పాళీ</string>
     <string name="avg_rate">సగటు వెల</string>
     <string name="total_milk">సగటు వెల</string>
     <string name="avg_fat">సగటు కొవ్వు</string>
-    <string name="avg_clr">సగటు C L R</string>
-    <string name="total">మొత్తం</string>
+    <string name="avg_clr">సగటు సిఎల్ఆర్</string>
     <string name="milk_ltr">పాలు లీటరు</string>
     <string name="ltr">లీటరు</string>
     <string name="density">సాంద్రత</string>
@@ -44,5 +44,24 @@
     <string name="powder">పొడి</string>
     <string name="powder_amount">పౌడర్ ధర</string>
     <string name="total_amount">మొత్తం మొత్తం</string>
-
+    <string name="login_title">సైన్-ఇన్ పద్ధతిని ఎంచుకోండి</string>
+    <string name="login_subtitle">మీ డెయిరీ మరియు పాలు ధరలను నిర్వహಿಸಲು సైన్ ఇన్ చేయండి</string>
+    <string name="continue_google">Google తో కొనసాగించండి</string>
+    <string name="continue_facebook">Facebook తో కొనసాగించండి</string>
+    <string name="continue_instagram">Instagram తో కొనసాగించండి</string>
+    <string name="login_terms">కొనసాగించడం ద్వారా, మీరు లాక్టో మాస్టర్\nసేవా నిబంధనలు &amp; గోప్యతా విధానానికి అంగీకరిస్తున్నారు</string>
+    <string name="milk_standards_title">పాలు రకాన్ని బట్టి కొవ్వు మరియు SNF ప్రమాణాలు</string>
+    <string name="milk_standards_answer" translatable="true">వివిధ పాలు రకాల కోసం ప్రామాణీకరించబడిన కూర్పు అవసరాలు:\n• ఆవు పాలు: 3.5% కొవ్వు, 8.5% SNF\n• గేదె పాలు: 6.0% కొవ్వు, 9.0% SNF\n• టోన్డ్ పాలు: 3.0% కొవ్వు, 8.5% SNF\n• డబుల్ టోన్డ్ పాలు: 1.5% కొవ్వు, 9.0% SNF\n• స్టాండర్డైజ్డ్ పాలు: 4.5% కొవ్వు, 8.5% SNF</string>
+    <string name="adulteration_title">భద్రత మరియు కల్తీ పరిమితులు</string>
+    <string name="adulteration_answer" translatable="true">పాలు సురక్షితమని మరియు హానికరమైన కల్తీలు లేకుండా చూసుకోవడానికి కఠినమైన నాణ్యతా ప్రమాణాలు:\n• అదనపు నీరు: ఫ్రీజింగ్ పాయింట్ లేదా లాక్టోమీటర్ సాంద్రత ద్వారా గుర్తించబడుతుంది.\n• యూరియా: సాధారణ పరిమితి 70 mg/100ml వరకు ఉంటుంది.\n• డిటర్జెంట్/సబ్బు: పూర్తిగా ఉండకూడదు.\n• స్టార్చ్: SNF పెంచడానికి జోడించబడుతుంది; 0% ఉండాలి.\n• న్యూట్రలైజర్స్ (సోడా/ఫార్మాలిన్): పుల్లగా మారకుండా నిరోధించడానికి జోడించబడతాయి.</string>
+    <string name="contaminant_title">భద్రత మరియు కల్తీ పరిమితులు (Contaminant Caps)</string>
+    <string name="contaminant_answer" translatable="true">డెయిరీ భద్రతను నిర్ధారించడానికి రెగ్యులేటరీ అధికారులు కఠినమైన అవశేష పరిమితులను (MRLs) అమలు చేస్తారు:\n• పురుగుమందుల అవశేషాలు: 0.01 నుండి 0.05 mg/kg మించకూడదు.\n• భారీ లోహాలు (సీసం/పాదరసం): సీసానికి 0.02 mg/kg మరియు పాదరసానికి 0.001 mg/kg గరిష్ట పరిమితి.\n• Aflatoxin M1: గరిష్ట పరిమితి 0.5 µg/kg.\n• యాంటీబయాటిక్ అవశేషాలు: సున్నా సహనం; యాంటీబయాటిక్ ఆనవాళ్లు ఉన్న పాలు పూర్తిగా తిరస్కరించబడతాయి.</string>
+    <string name="fssai_products_title">ప్రధాన పాల ఉత్పత్తుల ప్రమాణాలు (FSSAI)</string>
+    <string name="fssai_products_answer" translatable="true">FSSAI నిబంధనల ప్రకారం, వివిధ పాల ఉత్పత్తులు కఠినమైన కూర్పు ప్రమాణాలను సంతృప్తిపరచాలి:
+• టేబుల్ వెన్న: కనిష్టంగా 80.0% పాల కొవ్వు మరియు గరిష్టంగా 16.0% తేమ.
+• తెల్ల వెన్న: కనిష్టంగా 76.0% పాల కొవ్వు.
+• నెయ్యి: నిర్దిష్ట రీచర్ట్ విలువ (RV) మరియు తేమ పరిమితులతో పాలు, క్రీమ్ లేదా వెన్న నుండి ప్రత్యేకంగా పొందబడుతుంది.
+• కోవా: కనిష్టంగా 55.0% మొత్తం ఘనపదార్థాలు మరియు డ్రై మేటర్ ఆధారంగా కనిష్టంగా 30.0% పాల కొవ్వు.
+• పన్నీర్ / ఛన్నా: గరిష్టంగా 60.0% తేమ (పన్నీర్) / 65.0% తేమ (ఛన్నా), డ్రై మేటర్ ఆధారంగా కనిష్టంగా 50.0% కొవ్వు.
+• ఐస్ క్రీమ్ / కుల్ఫీ: ఇది సాధారణ, పండ్ల లేదా నట్-ఆధారితమైనదా అనే దానిపై ఆధారపడి నిర్దిష్ట కనీస ప్రొటీన్, మొత్తం ఘనపదార్థాలు మరియు పాల కొవ్వు అవసరాలను తీర్చాలి.</string>
 </resources>

@@ -39,12 +39,10 @@ public class RateActivity extends AppCompatActivity {
     private EditText etStRate, etQty, etFat, etSnf;
     private TextView tvAmt, tvRate, tvClr;
     private RadioGroup radioGroupRatio;
-
-    private float StRate, Qty, Fat, Snf, Amount;
+    private float StRate, Qty, Fat, Snf, milkAmount, fatAmount, snfAmount;
     String mlkRate, TotalAmount;
-    float CalcRate, fsRatio = 50F, clr = 0F;
+    float CalcRate, fsRatio = 50F, clr = 0F, rsFat = 0F, rsSnf = 0F;
     String stRate, qty, fat, snf, CLR;
-
     DecimalFormat f = new DecimalFormat("#.##");
 
     @Override
@@ -141,7 +139,11 @@ public class RateActivity extends AppCompatActivity {
                 return;
             }
 
-            CalcRate = (float) ((((StRate * fsRatio / 100) / 6.50) * Fat) + (((StRate * (100 - fsRatio) / 100 / 9.00) * Snf)));
+            rsFat = (float) (((StRate * fsRatio / 100) / 6.50) * Fat);
+            rsSnf = (float)((StRate * (100 - fsRatio) / 100 / 9.00) * Snf);
+
+            CalcRate = rsFat + rsSnf;
+
             CalcRate = Float.parseFloat(f.format(CalcRate));
 
             mlkRate = Float.toString(CalcRate);
@@ -152,9 +154,9 @@ public class RateActivity extends AppCompatActivity {
             CLR = Float.toString(clr);
             tvClr.setText(CLR);
 
-            Amount = Qty * CalcRate;
-            Amount = Float.parseFloat(f.format(Amount));
-            TotalAmount = Float.toString(Amount);
+            milkAmount = Qty * CalcRate;
+            milkAmount = Float.parseFloat(f.format(milkAmount));
+            TotalAmount = Float.toString(milkAmount);
             tvAmt.setText(TotalAmount);
 
         } catch (NumberFormatException e) {
@@ -181,7 +183,7 @@ public class RateActivity extends AppCompatActivity {
         String clrVal = tvClr.getText().toString().trim();
         String amtVal = tvAmt.getText().toString().trim();
 
-        String ratioStr = "50:50";
+        String ratioStr = "52:48";
         if (radioGroupRatio != null) {
             int checkedId = radioGroupRatio.getCheckedRadioButtonId();
             if (checkedId == R.id.radio5248) {
@@ -214,7 +216,7 @@ public class RateActivity extends AppCompatActivity {
         paint.setFakeBoldText(true);
         paint.setTextSize(20);
         paint.setColor(Color.parseColor("#00796B"));
-        canvas.drawText("Lacto Master Calculation Report", startX, startY, paint);
+        canvas.drawText(getString(R.string.app_name) + " Report", startX, startY, paint);
 
         startY += 20;
         paint.setFakeBoldText(false);
@@ -229,10 +231,10 @@ public class RateActivity extends AppCompatActivity {
         // Table 1: Entered Parameters
         startY = drawTable(canvas, paint, startX, startY, tableWidth, "1. Entered Parameters", new String[][]{
                 {"Parameter", "Value"},
-                {"Standard Rate", "₹ " + stRateVal},
-                {"FAT", fatVal + " %"},
-                {"SNF", snfVal + " %"},
-                {"Quantity", (qtyVal.isEmpty() ? "0" : qtyVal) + " kg"}
+                {getString(R.string.standard_rate), "₹ " + stRateVal},
+                {getString(R.string.fat), fatVal + " %"},
+                {getString(R.string.snf), snfVal + " %"},
+                {getString(R.string.qty), (qtyVal.isEmpty() ? "0" : qtyVal) + " kg"}
         }, new int[]{1, 2, 3, 4}, new int[]{Color.parseColor("#0F172A"), givenDataColor, givenDataColor, givenDataColor});
 
         startY += 16;
@@ -240,7 +242,7 @@ public class RateActivity extends AppCompatActivity {
         // Table 2: Selected Options
         startY = drawTable(canvas, paint, startX, startY, tableWidth, "2. Selected Options", new String[][]{
                 {"Option", "Selected Value"},
-                {"FAT & SNF Ratio", ratioStr}
+                {getString(R.string.fat_ratio), ratioStr}
         }, new int[]{1}, new int[]{givenDataColor});
 
         startY += 16;
@@ -248,9 +250,9 @@ public class RateActivity extends AppCompatActivity {
         // Table 3: Calculation Results
         startY = drawTable(canvas, paint, startX, startY, tableWidth, "3. Calculation Results", new String[][]{
                 {"Result Metric", "Value"},
-                {"Calculated Rate", "₹ " + (rateVal.isEmpty() ? "0.00" : rateVal) + " / liter"},
-                {"CLR", (clrVal.isEmpty() ? "0.0" : clrVal)},
-                {"Total Amount", "₹ " + (amtVal.isEmpty() ? "0.00" : amtVal)}
+                {getString(R.string.rate), "₹ " + (rateVal.isEmpty() ? "0.00" : rateVal) + " / liter"},
+                {getString(R.string.clr), (clrVal.isEmpty() ? "0.0" : clrVal)},
+                {getString(R.string.total_amount), "₹ " + (amtVal.isEmpty() ? "0.00" : amtVal)}
         }, new int[]{1, 3}, new int[]{Color.parseColor("#0284C7"), Color.parseColor("#16A34A")});
 
         pdfDocument.finishPage(page);

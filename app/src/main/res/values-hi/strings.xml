@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lacto Master</string>
+    <string name="avg_snf">औसत एसएनएफ</string>
     <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
     <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
     <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
@@ -15,14 +16,14 @@
     <string name="rate">रेट</string>
     <string name="amount">धनराशि</string>
     <string name="clr">सीएलआर</string>
-    <string name="rate_fat_snf">रेट फैट/एस.एन.एफ</string>
+    <string name="rate_fat_snf">फैट &amp; एसएनएफ विधि</string>
     <string name="rate_gurber">"गर्बर विधि"</string>
     <string name="date">दिनांक</string>
     <string name="shift">पाली</string>
-    <string name="avg_rate">औ. रेट</string>
+    <string name="avg_rate">औसत रेट</string>
     <string name="total_milk">कुल दूध</string>
-    <string name="avg_fat">औ. फैट</string>
-    <string name="avg_clr">औ. सीएलआर</string>
+    <string name="avg_fat">औसत फैट</string>
+    <string name="avg_clr">औसत सीएलआर</string>
     <string name="milk_ltr">दूध ली.</string>
     <string name="ltr">लीटर</string>
     <string name="ghee">घी</string>
@@ -50,4 +51,18 @@
     <string name="density_answer">दूध का घनत्व लैक्टोमीटर का उपयोग करके मापा जाता है। सामान्य गाय के दूध का घनत्व 1.028 से 1.030 ग्राम/मिली और भैंस के दूध का 1.030 से 1.032 ग्राम/मिली होता है। पानी मिलाने पर घनत्व घटता है।</string>
     <string name="acid_answer">ताजे दूध में मुख्य प्राकृतिक अम्ल लैक्टिक एसिड होता है (जब बैक्टीरिया दूध के लैक्टोज को किण्वित करते हैं), साथ ही साइट्रिक एसिड और मुक्त फैटी एसिड भी होते हैं।</string>
     <string name="a1_a2_answer">A1 और A2 गाय के दूध में पाए जाने वाले दो अलग-अलग प्रकार के बीटा-कैसीन प्रोटीन को संदर्भित करते हैं। A2 दूध देशी गायों (जैसे गिर, साहीवाल) से मिलता है जो पचाने में आसान होता है।</string>
+    <string name="login_title">साइन-इन विधि चुनें</string>
+    <string name="login_subtitle">अपने डेयरी और दूध दरों को प्रबंधित करने के लिए साइन इन करें</string>
+    <string name="continue_google">गूगल के साथ जारी रखें</string>
+    <string name="continue_facebook">फेसबुक के साथ जारी रखें</string>
+    <string name="continue_instagram">इंस्टाग्राम के साथ जारी रखें</string>
+    <string name="login_terms">जारी रखकर, आप लैक्टो मास्टर की\nसेवा की शर्तों और गोपनीयता नीति से सहमत हैं</string>
+    <string name="milk_standards_title">दूध के प्रकार के अनुसार फैट और एसएनएफ मानक</string>
+    <string name="milk_standards_answer" translatable="true">विभिन्न प्रकार के दूध के लिए मानकीकृत संरचना आवश्यकताएं:\n• <b>गाय का दूध:</b> 3.5\% फैट, 8.5\% एसएनएफ\n• <b>भैंस का दूध:</b> 6.0\% फैट, 9.0\% एसएनएफ\n• <b>टोंड दूध:</b> 3.0\% फैट, 8.5\% एसएनएफ\n• <b>डबल टोंड दूध:</b> 1.5\% फैट, 9.0\% एसएनएफ\n• <b>मानकीकृत दूध:8</b> 4.5\% फैट, 8.5\% एसएनएफ</string>
+    <string name="adulteration_title">सुरक्षा और मिलावट सीमाएं</string>
+    <string name="adulteration_answer" translatable="true">दूध की सुरक्षा और शुद्धता सुनिश्चित करने के लिए सख्त गुणवत्ता मानक:\n• <b>मिलावटी पानी:</b> हिमांक बिंदु या लैक्टोमीटर घनत्व द्वारा पता लगाया जाता है।\n• <b>यूरिया:</b> सामान्य सीमा 70 मिलीग्राम/100 मिली तक होती है; इससे अधिक होना जानबूझकर मिलावट को दर्शाता है।\n• <b>डिटर्जेंट/साबुन:</b> पूरी तरह से अनुपस्थित होना चाहिए (सतह तनाव या डाई परीक्षणों द्वारा परीक्षण)।\n• <b>स्टार्च/माल्टोडेक्सट्रिन:</b> एसएनएफ बढ़ाने के लिए जोड़ा जाता है; 0% होना चाहिए (आयोडीन परीक्षण द्वारा पता लगाया जाता)।\n• <b>न्यूट्रलाइज़र (सोडा/फॉर्मेलिन):</b> खट्टापन रोकने के लिए मिलाया जाता है; कच्चे दूध में सख्ती से प्रतिबंधित है।</string>
+    <string name="contaminant_title">सुरक्षा और संदूषक सीमाएं (Contaminant Caps)</string>
+    <string name="contaminant_answer" translatable="true">नियामक प्राधिकरण डेयरी सुरक्षा सुनिश्चित करने के लिए सख्त अवशेष सीमाएं (MRLs) और संदूषक कैप लागू करते हैं:\n• <b>कीटनाशक अवशेष:</b> यौगिक प्रकार के आधार पर 0.01 से 0.05 मिलीग्राम/किग्रा से अधिक नहीं होना चाहिए।\n• <b>भारी धातुएं (सीसा/पारा):</b> अधिकतम स्वीकार्य सीमा सीसा के लिए 0.02 मिलीग्राम/किग्रा और पारा के लिए 0.001 मिलीग्राम/किग्रा है।\n• <b>Aflatoxin M1:</b> 0.5 µg/kg की अधिकतम सीमा पर सख्ती से विनियमित।\n•<b> एंटीबायोटिक अवशेष:</b> शून्य सहनशीलता; एंटीबायोटिक के निशान वाला दूध पूरी तरह से अस्वीकार कर दिया जाता है।</string>
+    <string name="fssai_products_title">प्रमुख दुग्ध उत्पादों के मानक (FSSAI)</string>
+    <string name="fssai_products_answer" translatable="true">FSSAI नियमों के तहत, विभिन्न डेयरी उत्पादों को सख्त संरचनात्मक मानकों को पूरा करना होगा:\n\n• <b>टेबल बटर:</b> न्यूनतम 80.0% दूध वसा और अधिकतम 16.0% नमी।\n• <b>सफेद मक्खन:</b> न्यूनतम 76.0% दूध वसा।\n• <b>घी:</b> विशेष रीचर्ट मूल्य (RV) और नमी सीमा के साथ केवल दूध, मलाई या मक्खन से प्राप्त।\n• <b>खोआ:</b> न्यूनतम 55.0% कुल ठोस और शुष्क पदार्थ पर न्यूनतम 30.0% दूध वसा।\n• <b>पनीर / छैना:</b> अधिकतम 60.0% नमी (पनीर) / 65.0% नमी (छैना), शुष्क पदार्थ पर न्यूनतम 50.0% वसा।\n• <b>आइसक्रीम / कुल्फी:</b> सादे, फल या नट-आधारित होने के आधार पर विशिष्ट न्यूनतम प्रोटीन, कुल ठोस और दूध वसा आवश्यकताओं को पूरा करना चाहिए.</string>
 </resources>

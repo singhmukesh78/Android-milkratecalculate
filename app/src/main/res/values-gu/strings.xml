@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lacto Master</string>
+    <string name="avg_snf">સરા. SNF</string>
     <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
     <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
     <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
@@ -15,14 +16,13 @@
     <string name="rate">દર</string>
     <string name="amount">રકમ</string>
     <string name="clr">CLR</string>
-    <string name="rate_fat_snf">"દર ફૈટ/ સનફ "</string>
+    <string name="rate_fat_snf">ફેટ &amp; SNF પદ્ધતિ</string>
     <string name="date">તારીખ:</string>
     <string name="shift">પાળી</string>
     <string name="avg_rate">સરા. દર</string>
     <string name="total_milk">કુલ દૂધ:</string>
     <string name="avg_fat">"સરા.  ફૈટ "</string>
     <string name="avg_clr">સરા.  CLR</string>
-    <string name="total">કુલ:</string>
     <string name="milk_ltr">દૂધ લિટર</string>
     <string name="ltr">લિટર</string>
     <string name="ghee">ઘી</string>
@@ -51,4 +51,24 @@
     <string name="density_answer">દૂધની ઘનતા લેક્ટોમીટર વડે માપવામાં આવે છે. સામાન્ય ગાયના દૂધની ઘનતા 1.028 થી 1.030 g/ml અને ભેંસના દૂધની 1.030 થી 1.032 g/ml હોય છે.</string>
     <string name="acid_answer">તાજા દૂધમાં મુખ્ય કુદરતી એસિડ લેક્ટિક એસિડ છે.</string>
     <string name="a1_a2_answer">A1 અને A2 એ દૂધમાં મળી આવતા બીટા-કેસીન પ્રોટીનના પ્રકાર છે. દેશી ગાયોનું A2 દૂધ પચવામાં સરળ હોય છે.</string>
+    <string name="login_title">સાઇન-ઇન પદ્ધતિ પસંદ કરો</string>
+    <string name="login_subtitle">તમારા ડેરી અને દૂધના દરોનું સંચાલન કરવા માટે સાઇન ઇન કરો</string>
+    <string name="continue_google">Google સાથે ચાલુ રાખો</string>
+    <string name="continue_facebook">Facebook સાથે ચાલુ રાખો</string>
+    <string name="continue_instagram">Instagram સાથે ચાલુ રાખો</string>
+    <string name="login_terms">આગળ વધીને, તમે લેક્ટો માસ્ટરની\nસેવાની શરતો અને ગોપનીયતા નીતિ સાથે સહમત છો</string>
+    <string name="milk_standards_title">દૂધના પ્રકાર મુજબ ફેટ અને SNF ધોરણો</string>
+    <string name="milk_standards_answer" translatable="true">Different milk types have standardized composition requirements:\n• Cow Milk: 3.5% FAT, 8.5% SNF\n• Buffalo Milk: 6.0% FAT, 9.0% SNF\n• Toned Milk: 3.0% FAT, 8.5% SNF\n• Double Toned Milk: 1.5% FAT, 9.0% SNF\n• Standardized Milk: 4.5% FAT, 8.5% SNF</string>
+    <string name="adulteration_title">સુરક્ષા અને ભેળસેળની મર્યાદાઓ</string>
+    <string name="adulteration_answer" translatable="true">દૂધની સલામતી સુનિશ્ચિત કરવા અને હાનિકારક ભેળસેળથી મુક્ત રાખવા માટે કડક ગુણવત્તાના ધોરણો:\n• ઉમેરેલ પાણી: ફ્રીઝિંગ પોઈન્ટ અથવા લેક્ટોમીટર ઘનતા દ્વારા શોધાય છે.\n• યુરિયા: સામાન્ય મર્યાદા 70 mg/100ml સુધીની છે; વધુ હોવું એ હેતુપૂર્વકની ભેળસેળ દર્શાવે છે.\n• ડિટર્જન્ટ/સાબુ: સંપૂર્ણપણે ગેરહાજર હોવો જોઈએ.\n• સ્ટાર્ચ/માલ્ટોડેક્સ્ટ્રિન: SNF વધારવા માટે ઉમેરાય છે; 0% હોવો જોઈએ (આયોડિન ટેસ્ટ દ્વારા).\n• ન્યુટ્રલાઈઝર (સોડા/ફોર્માલિન): ખાટું થતું અટકાવવા ઉમેરાય છે; કાચા દૂધમાં સખત પ્રતિબંધિત છે.</string>
+    <string name="contaminant_title">સુરક્ષા અને દૂષક મર્યાદાઓ (Contaminant Caps)</string>
+    <string name="contaminant_answer" translatable="true">નિયામક સત્તાવાળાઓ ડેરી સુરક્ષા સુનિશ્ચિત કરવા માટે કડક અવશેષ મર્યાદાઓ (MRLs) લાગુ કરે છે:\n• જંતુનાશક અવશેષો: 0.01 થી 0.05 mg/kg થી વધુ હોવા જોઈએ નહીં.\n• ભારે ધાતુઓ (લીડ/પારો): લીડ માટે 0.02 mg/kg અને પારા માટે 0.001 mg/kg મહત્તમ મર્યાદા છે.\n• Aflatoxin M1: 0.5 µg/kg ની મહત્તમ મર્યાદા.\n• એન્ટિબાયોટિક અવશેષો: શૂન્ય સહનશીલતા; એન્ટિબાયોટિક નિશાનો ધરાવતું દૂધ સંપૂર્ણપણે અસ્વીકાર થાય છે.</string>
+    <string name="fssai_products_title">મુખ્ય દૂધ ઉત્પાદનો માટેના ધોરણો (FSSAI)</string>
+    <string name="fssai_products_answer" translatable="true">FSSAI નિયમો હેઠળ, વિવિધ ડેરી ઉત્પાદનોએ કડક રચનાત્મક ધોરણો પૂર્ણ કરવા આવશ્યક છે:
+• ટેબલ બટર: લઘુત્તમ 80.0% મિલ્ક ફેટ અને મહત્તમ 16.0% ભેજ.
+• સફેદ માખણ: લઘુત્તમ 76.0% મિલ્ક ફેટ.
+• ઘી: વિશિષ્ટ રીચર્ટ વેલ્યુ (RV) અને ભેજ મર્યાદા સાથે દૂધ, ક્રીમ અથવા માખણમાંથી મેળવવામાં આવે છે.
+• માવો (ખોવા): લઘુત્તમ 55.0% કુલ ઘન પદાર્થો અને ડ્રાય મેટર પર લઘુત્તમ 30.0% મિલ્ક ફેટ.
+• પનીર / છાના: મહત્તમ 60.0% ભેજ (પનીર) / 65.0% ભેજ (છાના), ડ્રાય મેટર પર લઘુત્તમ 50.0% ફેટ.
+• આઈસ્ક્રીમ / કુલ્ફી: પ્લેઈન, ફ્રુટ અથવા નટ-બેઝ્ડ હોવાના આધારે ચોક્કસ લઘુત્તમ પ્રોટીન, કુલ સોલિડ્સ અને મિલ્ક ફેટની જરૂરિયાતો પૂર્ણ કરવી આવશ્યક છે.</string>
 </resources>

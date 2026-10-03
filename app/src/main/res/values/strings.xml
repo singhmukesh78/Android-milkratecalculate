@@ -9,17 +9,17 @@
     <string name="fat_ratio">FAT Ratio</string>
     <string name="fat">FAT</string>
     <string name="snf">S N F</string>
-    <string name="qty">QTY</string>
+    <string name="qty">QTY(Ltr)</string>
     <string name="calculate">Calculate</string>
     <string name="clear">Clear</string>
     <string name="rate">Rate</string>
     <string name="amount">Amount</string>
     <string name="clr">C L R</string>
-    <string name="rate_fat_snf">Rate FAT/SNF</string>
+    <string name="rate_fat_snf">FAT &amp; SNF Method</string>
     <string name="rate_gurber">Gurber Method</string>
     <string name="ltr_kg">Ltr-->Kg</string>
-    <string name="avg_fat_snf">Avg FAT/SNF</string>
-    <string name="avg_fat_clr">Avg FAT/CLR</string>
+    <string name="avg_fat_snf">Avg FAT &amp; SNF</string>
+    <string name="avg_fat_clr">Avg FAT &amp; CLR</string>
     <string name="about_milk">About Milk</string>
     <string name="what_is_milk_cob">What is Milk COB?</string>
     <string name="what_are_the_standards_for_milk_testing">What are the standards for milk testing?</string>
@@ -30,9 +30,9 @@
     <string name="what_is_a1_and_a2_milk">What is A1 and A2 milk?</string>
     <string name="date">Date:</string>
     <string name="shift">Shift</string>
-    <string name="avg_rate">Avg Rate:</string>
+    <string name="avg_rate">Avg Rate / Ltr:</string>
     <string name="total_milk">Total Milk:</string>
-    <string name="avg_fat">Avg FAT:</string>
+    <string name="avg_fat">Average FAT:</string>
     <string name="avg_clr">Avg CLR:</string>
     <string name="milk_ltr">Milk Ltr</string>
     <string name="ltr">Liter</string>
@@ -57,5 +57,26 @@
     <string name="density_answer" translatable="false">Milk density is measured using a lactometer. Normal cow milk density ranges from 1.028 to 1.030 g/ml, and buffalo milk ranges from 1.030 to 1.032 g/ml. Watering milk decreases density, while skimming increases it.</string>
     <string name="acid_answer" translatable="false">The primary natural acid in fresh milk is lactic acid (formed when bacteria ferment milk lactose), along with citric acid and free fatty acids.</string>
     <string name="a1_a2_answer" translatable="false">A1 and A2 refer to two different types of beta-casein protein found in cow\'s milk. A2 milk comes from cows that produce only A2 beta-casein (common in indigenous/desi breeds like Gir, Sahiwal), which many people find easier to digest than A1 milk.</string>
+    <string name="avg_snf">Average SNF</string>
+    <string name="milk_standards_title">Fat and SNF Standards by Milk Type</string>
+    <string name="milk_standards_answer" translatable="true">Different milk types have standardized composition requirements:\n• Cow Milk: 3.5% FAT, 8.5% SNF\n• Buffalo Milk: 6.0% FAT, 9.0% SNF\n• Toned Milk: 3.0% FAT, 8.5% SNF\n• Double Toned Milk: 1.5% FAT, 9.0% SNF\n• Standardized Milk: 4.5% FAT, 8.5% SNF</string>
+    <string name="adulteration_title">Safety and Adulteration Limits</string>
+    <string name="adulteration_answer" translatable="false">Strict quality parameters ensure milk is safe for consumption and free from harmful adulterants:\n• Added Water: Detected via freezing point or lactometer density.\n• Urea: Normal range is up to 70 mg/100ml; higher indicates deliberate adulteration.\n• Detergent / Soap: Should be completely absent (tested via surface tension or dye tests).\n• Starch / Maltodextrin: Added to increase SNF; must be 0% (detected via iodine test).\n• Neutralizers (Soda/Formalin): Added to prevent souring; strictly prohibited in raw milk.</string>
+    <string name="contaminant_title">Safety and Contaminant Caps</string>
+    <string name="contaminant_answer" translatable="false">Regulatory authorities enforce strict maximum residue limits (MRLs) and contaminant caps to ensure dairy safety:\n• Pesticide Residues: Must not exceed 0.01 to 0.05 mg/kg depending on compound type.\n• Heavy Metals (Lead/Mercury): Maximum allowable limits are 0.02 mg/kg for lead and 0.001 mg/kg for mercury.\n• Aflatoxin M1: Regulated tightly at a maximum cap of 0.5 µg/kg (parts per billion).\n• Antibiotic Residues: Zero tolerance; milk containing antibiotic traces is rejected entirely.</string>
+    <string name="login_title">Choose Sign-In Method</string>
+    <string name="login_subtitle">Sign in to manage your dairy and milk rates</string>
+    <string name="continue_google">Continue with Google</string>
+    <string name="continue_facebook">Continue with Facebook</string>
+    <string name="continue_instagram">Continue with Instagram</string>
+    <string name="login_terms">By continuing, you agree to Lacto Master\nTerms of Service &amp; Privacy Policy</string>
+    <string name="fssai_products_title">Standards for Key Milk Products (FSSAI)</string>
+    <string name="fssai_products_answer" translatable="true">Under FSSAI regulations, various dairy products must meet strict compositional standards:
+• Table Butter: Minimum 80.0\% Milk Fat and maximum 16.0\% moisture.
+• White Butter: Minimum 76.0\% Milk Fat.
+• Ghee: Derived exclusively from milk, cream, or butter with specified Reichert value (RV) and moisture limits.
+• Khoa: Minimum 55.0\% total solids and minimum 30.0\% milk fat on dry matter basis.
+• Paneer / Chhana: Maximum 60.0\% moisture (Paneer) / 65.0\% moisture (Chhana), with a minimum of 50.0\% fat on a dry matter basis.
+• Ice Cream / Kulfi: Must meet specific minimum protein, total solids, and milk fat requirements depending on whether it is plain, fruit, or nut-based.</string>
 
 </resources>

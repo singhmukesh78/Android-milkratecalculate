@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -65,6 +66,17 @@ public class RateClrMethod extends AppCompatActivity {
         etQtyClr = findViewById(R.id.etQtyClr);
         etFat = findViewById(R.id.etFATPer);
         etCLR = findViewById(R.id.etCLR);
+        etCLR.setFilters(new InputFilter[] {
+            new InputFilter.LengthFilter(4),
+            (source, start, end, dest, dstart, dend) -> {
+                String replacement = source.subSequence(start, end).toString();
+                String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length()).toString();
+                if (tentative.matches("^\\d{0,2}(\\.\\d{0,1})?$")) {
+                    return null;
+                }
+                return "";
+            }
+        });
         etRatePfat = findViewById(R.id.etRatePF);
         etRatePq = findViewById(R.id.etRatePQ);
 
@@ -134,6 +146,12 @@ public class RateClrMethod extends AppCompatActivity {
             fat = Fat.isEmpty() ? 0f : Float.parseFloat(Fat);
             clr = CLR.isEmpty() ? 0f : Float.parseFloat(CLR);
 
+            if (clr > 0 && clr < 24f) {
+                etCLR.setError("CLR cannot be less than 24");
+                etCLR.requestFocus();
+                return;
+            }
+
             snf = (float) ((clr / 4.0) + (0.20 * fat) + 0.14);
             snf = Float.parseFloat(f.format(snf));
 
@@ -146,7 +164,7 @@ public class RateClrMethod extends AppCompatActivity {
             if (clrMethod) {
                 ratePQtl = Float.parseFloat(ratePQ);
 
-                gheeAmt = (float) (ghee * ((ratePQtl * 60 / 100) / 6.5) / 1000);
+                gheeAmt = (float) (ghee * ((ratePQtl * 60 / 100) / 6.5) / 1000);/////
                 gheeAmt = Float.parseFloat(f.format(gheeAmt));
 
                 powderAmt = (float) (powder * ((ratePQtl * 40 / 100) / 8.5) / 1000);
@@ -263,11 +281,11 @@ public class RateClrMethod extends AppCompatActivity {
         int givenDataColor = Color.parseColor("#4F46E5");
 
         // Table 1: Entered Parameters & Method
-        startY = drawTable(canvas, paint, startX, startY, tableWidth, "1. Milk Parameters & Method", new String[][]{
+        startY = drawTable(canvas, paint, startX, startY, tableWidth, "1. " + getString(R.string.milk_kg) + " & Method", new String[][]{
                 {"Parameter", "Value"},
-                {"Milk Quantity", qtyVal + " kg"},
-                {"FAT", fatVal + " %"},
-                {"CLR", clrVal},
+                {getString(R.string.milk_kg), qtyVal + " kg"},
+                {getString(R.string.fat), fatVal + " %"},
+                {getString(R.string.clr), clrVal},
                 {"Calculation Method", methodStr},
                 {rateLabelStr, "₹ " + rateVal}
         }, new int[]{1, 2, 3, 4, 5}, new int[]{givenDataColor, givenDataColor, givenDataColor, givenDataColor, givenDataColor});
@@ -279,11 +297,11 @@ public class RateClrMethod extends AppCompatActivity {
                 {"Result Metric", "Value"},
                 {"Calculated Rate / KG", "₹ " + ratePerKgVal},
                 {"Calculated SNF", snfVal},
-                {"Ghee Weight", gheeVal},
-                {"Ghee Amount", "₹ " + gheeAmtVal},
-                {"Powder Weight", pwdrVal},
-                {"Powder Amount", "₹ " + pwdrAmtVal},
-                {"Total Amount", "₹ " + totalAmtVal}
+                {getString(R.string.ghee), gheeVal},
+                {getString(R.string.ghee_amout), "₹ " + gheeAmtVal},
+                {getString(R.string.powder), pwdrVal},
+                {getString(R.string.powder_amount), "₹ " + pwdrAmtVal},
+                {getString(R.string.total_amount), "₹ " + totalAmtVal}
         }, new int[]{1, 2, 4, 6, 7}, new int[]{Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#16A34A")});
 
         pdfDocument.finishPage(page);

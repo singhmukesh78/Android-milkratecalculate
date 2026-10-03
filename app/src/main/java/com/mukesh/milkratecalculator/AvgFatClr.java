@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.view.View;
@@ -52,9 +53,10 @@ public class AvgFatClr extends AppCompatActivity {
     private String Fat1, Fat2, Fat3, Fat4, Fat5;
     private String Clr1, Clr2, Clr3, Clr4, Clr5;
     private String Rt1, Rt2, Rt3, Rt4, Rt5;
+    float snf1, snf2, snf3, snf4, snf5;
 
-    float fatAvg = 0.0F, clrAvg = 0.0F, totalMilk = 0.0F;
-    float CalcRate, StRate, fsRatio = 50F;
+    float fatAvg = 0.0F, clrAvg = 0.0F, totalMilk = 0.0F, snf = 0.0F;
+    float CalcRate, StRate, fsRatio = 60F;
     String AvgFat, AvgClr, TotalMilk, stRate, totalAmt;
     String date;
     float Q1, Q2, Q3, Q4, Q5, F1, F2, F3, F4, F5, C1, C2, C3, C4, C5;
@@ -109,6 +111,20 @@ public class AvgFatClr extends AppCompatActivity {
         etClr3 = findViewById(R.id.etClr3);
         etClr4 = findViewById(R.id.etClr4);
         etClr5 = findViewById(R.id.etClr5);
+
+        InputFilter clrFilter = (source, start, end, dest, dstart, dend) -> {
+            String replacement = source.subSequence(start, end).toString();
+            String tentative = dest.subSequence(0, dstart) + replacement + dest.subSequence(dend, dest.length());
+            if (tentative.matches("^\\d{0,2}(\\.\\d{0,1})?$")) {
+                return null;
+            }
+            return "";
+        };
+        etClr1.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), clrFilter });
+        etClr2.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), clrFilter });
+        etClr3.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), clrFilter });
+        etClr4.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), clrFilter });
+        etClr5.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), clrFilter });
 
         tvTMlk = findViewById(R.id.tvTMlk);
         tvAvgFat = findViewById(R.id.tvAvgFat);
@@ -194,6 +210,32 @@ public class AvgFatClr extends AppCompatActivity {
         C4 = Float.parseFloat(Clr4);
         C5 = Float.parseFloat(Clr5);
 
+        if (C1 > 0 && C1 < 15f) {
+            etClr1.setError("CLR cannot be less than 15");
+            etClr1.requestFocus();
+            return;
+        }
+        if (C2 > 0 && C2 < 15f) {
+            etClr2.setError("CLR cannot be less than 15");
+            etClr2.requestFocus();
+            return;
+        }
+        if (C3 > 0 && C3 < 15f) {
+            etClr3.setError("CLR cannot be less than 15");
+            etClr3.requestFocus();
+            return;
+        }
+        if (C4 > 0 && C4 < 15f) {
+            etClr4.setError("CLR cannot be less than 15");
+            etClr4.requestFocus();
+            return;
+        }
+        if (C5 > 0 && C5 < 15f) {
+            etClr5.setError("CLR cannot be less than 15");
+            etClr5.requestFocus();
+            return;
+        }
+
         totalMilk = Q1 + Q2 + Q3 + Q4 + Q5;
         if (totalMilk > 0) {
             fatAvg = ((F1 * Q1) + (F2 * Q2) + (F3 * Q3) + (F4 * Q4) + (F5 * Q5)) / totalMilk;
@@ -205,39 +247,67 @@ public class AvgFatClr extends AppCompatActivity {
         fatAvg = Float.parseFloat(f.format(fatAvg));
         clrAvg = Float.parseFloat(f.format(clrAvg));
 
-        CalcRate = (float) ((((StRate * fsRatio / 100) / 6.50) * (float) fatAvg) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) clrAvg)));
+
+        snf = (float) ((clrAvg / 4.0) + (0.20 * fatAvg) + 0.14);
+
+        CalcRate = (float) ((((StRate * 60 / 100) / 6.50) * (float) fatAvg) + ((((StRate * (40) / 100 )/ 8.50) * (float) snf)));
         CalcRate = Float.parseFloat(f.format(CalcRate));
         String Rate = Float.toString(CalcRate);
 
-        float rate1 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F1) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) C1)))));
-        float tAmt1 = Float.parseFloat(f.format(rate1 * Q1));
-        Rt1 = String.valueOf(rate1);
-        tvRate1.setText(Rt1);
-        tvRs1.setText(String.valueOf(tAmt1));
+        if (Q1 <= 0 || F1 <= 0 || C1 <= 0) {
+            tvRate1.setText("0.00");
+            tvRs1.setText("0.00");
+        } else {
+            snf1 = Float.parseFloat(f.format((float) ((C1 / 4.0) + (0.20 * F1) + 0.14)));
+            float rate1 = Float.parseFloat(f.format((float) ((((StRate * 60 / 100) / 6.50) * (float) F1) + (((StRate * (40) / 100 / 8.50) * (float) snf1)))));
+            float tAmt1 = Float.parseFloat(f.format(rate1 * Q1));
+            tvRate1.setText(String.valueOf(rate1));
+            tvRs1.setText(String.valueOf(tAmt1));
+        }
 
-        float rate2 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F2) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) C2)))));
-        float tAmt2 = Float.parseFloat(f.format(rate2 * Q2));
-        Rt2 = String.valueOf(rate2);
-        tvRate2.setText(Rt2);
-        tvRs2.setText(String.valueOf(tAmt2));
+        if (Q2 <= 0 || F2 <= 0 || C2 <= 0) {
+            tvRate2.setText("0.00");
+            tvRs2.setText("0.00");
+        } else {
+            snf2 = Float.parseFloat(f.format((float) ((C2 / 4.0) + (0.20 * F2) + 0.14)));
+            float rate2 = Float.parseFloat(f.format((float) ((((StRate * 60 / 100) / 6.50) * (float) F2) + (((StRate * (40) / 100 / 8.50) * (float) snf2)))));
+            float tAmt2 = Float.parseFloat(f.format(rate2 * Q2));
+            tvRate2.setText(String.valueOf(rate2));
+            tvRs2.setText(String.valueOf(tAmt2));
+        }
 
-        float rate3 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F3) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) C3)))));
-        float tAmt3 = Float.parseFloat(f.format(rate3 * Q3));
-        Rt3 = String.valueOf(rate3);
-        tvRate3.setText(Rt3);
-        tvRs3.setText(String.valueOf(tAmt3));
+        if (Q3 <= 0 || F3 <= 0 || C3 <= 0) {
+            tvRate3.setText("0.00");
+            tvRs3.setText("0.00");
+        } else {
+            snf3 = Float.parseFloat(f.format((float) ((C3 / 4.0) + (0.20 * F3) + 0.14)));
+            float rate3 = Float.parseFloat(f.format((float) ((((StRate * 60 / 100) / 6.50) * (float) F3) + (((StRate * (40) / 100 / 8.50) * (float) snf3)))));
+            float tAmt3 = Float.parseFloat(f.format(rate3 * Q3));
+            tvRate3.setText(String.valueOf(rate3));
+            tvRs3.setText(String.valueOf(tAmt3));
+        }
 
-        float rate4 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F4) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) C4)))));
-        float tAmt4 = Float.parseFloat(f.format(rate4 * Q4));
-        Rt4 = String.valueOf(rate4);
-        tvRate4.setText(Rt4);
-        tvRs4.setText(String.valueOf(tAmt4));
+        if (Q4 <= 0 || F4 <= 0 || C4 <= 0) {
+            tvRate4.setText("0.00");
+            tvRs4.setText("0.00");
+        } else {
+            snf4 = Float.parseFloat(f.format((float) ((C4 / 4.0) + (0.20 * F4) + 0.14)));
+            float rate4 = Float.parseFloat(f.format((float) ((((StRate * 60 / 100) / 6.50) * (float) F4) + (((StRate * (40) / 100 / 8.50) * (float) snf4)))));
+            float tAmt4 = Float.parseFloat(f.format(rate4 * Q4));
+            tvRate4.setText(String.valueOf(rate4));
+            tvRs4.setText(String.valueOf(tAmt4));
+        }
 
-        float rate5 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F5) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) C5)))));
-        float tAmt5 = Float.parseFloat(f.format(rate5 * Q5));
-        Rt5 = String.valueOf(rate5);
-        tvRate5.setText(Rt5);
-        tvRs5.setText(String.valueOf(tAmt5));
+        if (Q5 <= 0 || F5 <= 0 || C5 <= 0) {
+            tvRate5.setText("0.00");
+            tvRs5.setText("0.00");
+        } else {
+            snf5 = Float.parseFloat(f.format((float) ((C5 / 4.0) + (0.20 * F5) + 0.14)));
+            float rate5 = Float.parseFloat(f.format((float) ((((StRate * 60 / 100) / 6.50) * (float) F5) + (((StRate * (40) / 100 / 8.50) * (float) snf5)))));
+            float tAmt5 = Float.parseFloat(f.format(rate5 * Q5));
+            tvRate5.setText(String.valueOf(rate5));
+            tvRs5.setText(String.valueOf(tAmt5));
+        }
 
         totalAmt = Float.toString(Float.parseFloat(f.format(totalMilk * CalcRate)));
 

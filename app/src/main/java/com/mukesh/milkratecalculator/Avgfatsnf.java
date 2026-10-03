@@ -226,35 +226,55 @@ public class Avgfatsnf extends AppCompatActivity {
         CalcRate = Float.parseFloat(f.format(CalcRate));
         String Rate = Float.toString(CalcRate);
 
-        float rate1 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F1) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S1)))));
-        float tAmt1 = Float.parseFloat(f.format(rate1 * Q1));
-        Rt1 = String.valueOf(rate1);
-        tvRate1.setText(Rt1);
-        tvRs1.setText(String.valueOf(tAmt1));
+        if (Q1 <= 0 || F1 <= 0 || S1 <= 0) {
+            tvRate1.setText("0.00");
+            tvRs1.setText("0.00");
+        } else {
+            float rate1 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F1) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S1)))));
+            float tAmt1 = Float.parseFloat(f.format(rate1 * Q1));
+            tvRate1.setText(String.valueOf(rate1));
+            tvRs1.setText(String.valueOf(tAmt1));
+        }
 
-        float rate2 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F2) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S2)))));
-        float tAmt2 = Float.parseFloat(f.format(rate2 * Q2));
-        Rt2 = String.valueOf(rate2);
-        tvRate2.setText(Rt2);
-        tvRs2.setText(String.valueOf(tAmt2));
+        if (Q2 <= 0 || F2 <= 0 || S2 <= 0) {
+            tvRate2.setText("0.00");
+            tvRs2.setText("0.00");
+        } else {
+            float rate2 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F2) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S2)))));
+            float tAmt2 = Float.parseFloat(f.format(rate2 * Q2));
+            tvRate2.setText(String.valueOf(rate2));
+            tvRs2.setText(String.valueOf(tAmt2));
+        }
 
-        float rate3 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F3) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S3)))));
-        float tAmt3 = Float.parseFloat(f.format(rate3 * Q3));
-        Rt3 = String.valueOf(rate3);
-        tvRate3.setText(Rt3);
-        tvRs3.setText(String.valueOf(tAmt3));
+        if (Q3 <= 0 || F3 <= 0 || S3 <= 0) {
+            tvRate3.setText("0.00");
+            tvRs3.setText("0.00");
+        } else {
+            float rate3 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F3) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S3)))));
+            float tAmt3 = Float.parseFloat(f.format(rate3 * Q3));
+            tvRate3.setText(String.valueOf(rate3));
+            tvRs3.setText(String.valueOf(tAmt3));
+        }
 
-        float rate4 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F4) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S4)))));
-        float tAmt4 = Float.parseFloat(f.format(rate4 * Q4));
-        Rt4 = String.valueOf(rate4);
-        tvRate4.setText(Rt4);
-        tvRs4.setText(String.valueOf(tAmt4));
+        if (Q4 <= 0 || F4 <= 0 || S4 <= 0) {
+            tvRate4.setText("0.00");
+            tvRs4.setText("0.00");
+        } else {
+            float rate4 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F4) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S4)))));
+            float tAmt4 = Float.parseFloat(f.format(rate4 * Q4));
+            tvRate4.setText(String.valueOf(rate4));
+            tvRs4.setText(String.valueOf(tAmt4));
+        }
 
-        float rate5 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F5) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S5)))));
-        float tAmt5 = Float.parseFloat(f.format(rate5 * Q5));
-        Rt5 = String.valueOf(rate5);
-        tvRate5.setText(Rt5);
-        tvRs5.setText(String.valueOf(tAmt5));
+        if (Q5 <= 0 || F5 <= 0 || S5 <= 0) {
+            tvRate5.setText("0.00");
+            tvRs5.setText("0.00");
+        } else {
+            float rate5 = Float.parseFloat(f.format((float) ((((StRate * fsRatio / 100) / 6.50) * (float) F5) + (((StRate * (100 - fsRatio) / 100 / 9.00) * (float) S5)))));
+            float tAmt5 = Float.parseFloat(f.format(rate5 * Q5));
+            tvRate5.setText(String.valueOf(rate5));
+            tvRs5.setText(String.valueOf(tAmt5));
+        }
 
         totalAmt = Float.toString(Float.parseFloat(f.format(totalMilk * CalcRate)));
 

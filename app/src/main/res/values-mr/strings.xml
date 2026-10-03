@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lacto Master</string>
+    <string name="avg_snf">औ. एसएनएफ</string>
     <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
     <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
     <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
     <string name="title">डॅशबोर्ड</string>
     <string name="standard_rate">मानक रेट</string>
-    <string name="fat_ratio">फैट प्रमाण</string>
+    <string name="fat_ratio">फैट गुणोत्तर</string>
     <string name="fat">फैट</string>
     <string name="snf">स्नॅफ</string>
-    <string name="qty">रक्कम</string>
+    <string name="qty">माप</string>
     <string name="calculate">गणना करा</string>
     <string name="clear">हटवा</string>
     <string name="amount">राशी</string>
     <string name="clr">सीएलआर</string>
-    <string name="rate_fat_snf">रेट फैट/एस.एन.एफ</string>
+    <string name="rate_fat_snf">फॅट &amp; एसएनएफ पद्धत</string>
     <string name="date">तारीख</string>
     <string name="rate">रेट</string>
-    <string name="shift">पालट</string>
+    <string name="shift">पाली</string>
     <string name="avg_rate">सरासरी रेट</string>
     <string name="total_milk">एकूण दूध</string>
     <string name="avg_fat">सरासरी फैट</string>
     <string name="avg_clr">सरा. सीएलआर</string>
-    <string name="total">रक्कम</string>
     <string name="milk_ltr">दूध लिटर</string>
     <string name="ltr">लिटर</string>
     <string name="ghee">तूप</string>
@@ -51,4 +51,24 @@
     <string name="density_answer">दुधाची घनता लॅक्टोमीटरने मोजली जाते. सामान्य गाईच्या दुधाची घनता 1.028 ते 1.030 g/ml आणि म्हशीच्या दुधाची 1.030 ते 1.032 g/ml असते.</string>
     <string name="acid_answer">ताजा दुधातील मुख्य नैसर्गिक ऍसिड लॅक्टिक ऍसिड असते.</string>
     <string name="a1_a2_answer">A1 आणि A2 हे गाईच्या दुधात आढळणारे बीटा-केसिन प्रोटीनचे प्रकार आहेत. देशी गाईंचे A2 दूध पचायला सोपे असते.</string>
+    <string name="login_title">साइन-इन पद्धत निवडा</string>
+    <string name="login_subtitle">तुमचे डेअरी आणि दूध दर व्यवस्थापित करण्यासाठी साइन इन करा</string>
+    <string name="continue_google">Google सह सुरू ठेवा</string>
+    <string name="continue_facebook">Facebook सह सुरू ठेवा</string>
+    <string name="continue_instagram">Instagram सह सुरू ठेवा</string>
+    <string name="login_terms">पुढे चालू ठेवून, तुम्ही लॅक्टो मास्टरच्या\nसेवा अटी आणि गोपनीयता धोरणास सहमत आहात</string>
+    <string name="milk_standards_title">दूध प्रकारानुसार फॅट आणि एसएनएफ मानके</string>
+    <string name="milk_standards_answer" translatable="true">विविध दूध प्रकारांसाठी प्रमाणित रचना आवश्यकता:\n• गायचे दूध: 3.5% फॅट, 8.5% SNF\n• म्हशीचे दूध: 6.0% फॅट, 9.0% SNF\n• टोंड दूध: 3.0% फॅट, 8.5% SNF\n• डबल टोंड दूध: 1.5% फॅट, 9.0% SNF\n• स्टँडर्डाइज्ड दूध: 4.5% फॅट, 8.5% SNF</string>
+    <string name="adulteration_title">सुरक्षा आणि भेसळ मर्यादा</string>
+    <string name="adulteration_answer" translatable="true">दुधाची सुरक्षा सुनिश्चित करण्यासाठी आणि हानिकारक भेसळ दूर ठेवण्यासाठी कडक गुणवत्ता मानके:\n• अतिरिक्त पाणी: गोठणबिंदू किंवा लॅक्टोमीटर घनतेद्वारे ओळखले जाते.\n• यूरिया: सामान्य श्रेणी 70 mg/100ml पर्यंत असते; जास्त असणे जाणीवपूर्वक केलेली भेसळ दर्शवते.\n• डिटर्जंट/साबण: पूर्णपणे अनुपस्थित असावा.\n• स्टार्च/माल्टोडեքस्ट्रिन: SNF वाढवण्यासाठी जोडले जाते; 0% असावे.\n• न्यूट्रलायझर (सोडा/फॉर्मलिन): नासणे रोखण्यासाठी जोडले जाते; कच्च्या दुधात सक्त मनाई आहे.</string>
+    <string name="contaminant_title">सुरक्षा आणि दूषित मर्यादा (Contaminant Caps)</string>
+    <string name="contaminant_answer" translatable="true">नियामक प्राधिकारी डेअरी सुरक्षा सुनिश्चित करण्यासाठी कठोर अवशेष मर्यादा (MRLs) लागू करतात:\n• कीटकनाशक अवशेष: 0.01 ते 0.05 mg/kg पेक्षा जास्त नसावे.\n• जड धातू (लेड/पारा): कमाल मर्यादा लेडसाठी 0.02 mg/kg आणि पाऱ्यासाठी 0.001 mg/kg आहे.\n• Aflatoxin M1: कमाल मर्यादा 0.5 µg/kg.\n• प्रतिजैविक अवशेष: शून्य सहनशीलता; प्रतिजैविक अंश असलेले दूध पूर्णपणे नाकारले जाते.</string>
+    <string name="fssai_products_title">प्रमुख दूध उत्पादनांसाठी मानके (FSSAI)</string>
+    <string name="fssai_products_answer" translatable="true">FSSAI नियमांनुसार, विविध दुग्धजन्य पदार्थांनी कठोर निकष पूर्ण करणे आवश्यक आहे:
+• टेबल बटर: किमान 80.0% दूध फॅट आणि कमाल 16.0% ओलावा.
+• पांढरे लोणी: किमान 76.0% दूध फॅट.
+• तूप: विशिष्ट रीचर्ट मूल्य (RV) आणि ओलावा मर्यादेसह दूध, मलई किंवा लोण्यापासून बनवलेले.
+• खवा: किमान 55.0% एकूण घन घटक आणि ड्राय मॅटरवर किमान 30.0% दूध फॅट.
+• पनीर / छन्ना: कमाल 60.0% ओलावा (पनीर) / 65.0% ओलावा (छन्ना), ड्राय मॅटरवर किमान 50.0% फॅट.
+• आईस्क्रीम / कुल्फी: साधे, फळ किंवा नट-आधारित असण्यावर आधारित विशिष्ट किमान प्रथिने, एकूण घन घटक आणि दूध फॅट आवश्यकता पूर्ण करणे आवश्यक आहे.</string>
 </resources>

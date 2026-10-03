@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lacto Master</string>
+    <string name="avg_snf">ಸರಾ. SNF</string>
     <string name="app_id">ca-app-pub-6141645931944823~1024266424</string>
     <string name="banner_ad_unit_id">ca-app-pub-6141645931944823/1311206880</string>
     <string name="banner_ad_unit_id_Test">ca-app-pub-3940256099942544/6300978111</string>
@@ -18,7 +19,6 @@
     <string name="total_milk">ಒಟ್ಟು ಹಾಲು:</string>
     <string name="avg_fat">ಸರಾಸರಿ ಕೊಬ್ಬು</string>
     <string name="avg_clr">ಸರಾಸರಿ ಸಿ ಎಲ್ ಆರ್</string>
-    <string name="total">ಒಟ್ಟು:</string>
     <string name="milk_ltr">"ಹಾಲು ಲೀಟರ್ "</string>
     <string name="ltr">ಲೀಟರ್</string>
     <string name="ghee">ತುಪ್ಪ</string>
@@ -27,7 +27,7 @@
     <string name="rate">ದರ</string>
     <string name="amount">ಮೊತ್ತ</string>
     <string name="clr">ಸಿ ಎಲ್ ಆರ್</string>
-    <string name="rate_fat_snf">ದರ ಕೊಬ್ಬು/ಸ್ನಾಫ್</string>
+    <string name="rate_fat_snf">ಕೊಬ್ಬು &amp; SNF ವಿಧಾನ</string>
     <string name="rate_gurber">ಗರ್ಬರ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ</string>
     <string name="ltr_kg">ಲೀಟರ್ -> ಕೆಜಿ</string>
     <string name="avg_fat_snf">సగటు ಕೊಬ್ಬು/ಸ್ನಾಫ್</string>
@@ -43,4 +43,25 @@
     <string name="ghee_amout">ತುಪ್ಪದ ಬೆಲೆ</string>
     <string name="powder">ಪುಡಿ</string>
     <string name="powder_amount">ಪುಡಿ ಬೆಲೆ</string>
+    <string name="total_amount">ಒಟ್ಟು ಮೊತ್ತ</string>
+    <string name="login_title">ಸೈನ್-ಇನ್ ವಿಧಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="login_subtitle">ನಿಮ್ಮ ಡೈರಿ ಮತ್ತು ಹಾಲು ದರಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
+    <string name="continue_google">Google ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="continue_facebook">Facebook ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="continue_instagram">Instagram ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="login_terms">ಮುಂದುವರಿಸುವ ಮೂಲಕ, ನೀವು ಲ್ಯಾಕ್ಟೋ ಮಾಸ್ಟರ್‌ನ\nಸೇವಾ ನಿಯಮಗಳು ಮತ್ತು ಗೌಪ್ಯತೆ ನೀತಿಗೆ ಒಪ್ಪುತ್ತೀರಿ</string>
+    <string name="milk_standards_title">ಹಾಲು ಪ್ರಕಾರದ ಮೂಲಕ ಕೊಬ್ಬು ಮತ್ತು SNF ಮಾನದಂಡಗಳು</string>
+    <string name="milk_standards_answer" translatable="true">ವಿವಿಧ ಹಾಲು ಪ್ರಕಾರಗಳಿಗೆ ಪ್ರಮಾಣೀಕೃತ ಸಂಯೋಜನೆಯ ಅವಶ್ಯಕತೆಗಳು:\n• ಹಸುವಿನ ಹಾಲು: 3.5% ಕೊಬ್ಬು, 8.5% SNF\n• ಎಮ್ಮೆಯ ಹಾಲು: 6.0% ಕೊಬ್ಬು, 9.0% SNF\n• ಟೋನ್ಡ್ ಹಾಲು: 3.0% ಕೊಬ್ಬು, 8.5% SNF\n• ಡಬಲ್ ಟೋನ್ಡ್ ಹಾಲು: 1.5% ಕೊಬ್ಬು, 9.0% SNF\n• ಸ್ಟ್ಯಾಂಡರ್ಡೈಸ್ಡ್ ಹಾಲು: 4.5% ಕೊಬ್ಬು, 8.5% SNF</string>
+    <string name="adulteration_title">ಸುರಕ್ಷತೆ ಮತ್ತು ಕಲ್ಮಶ ಮಿತಿಗಳು</string>
+    <string name="adulteration_answer" translatable="true">ಹಾಲಿನ ಸುರಕ್ಷತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಮತ್ತು ಹಾನಿಕಾರಕ ಕಲ್ಮಶಗಳಿಂದ ಮುಕ್ತವಾಗಿರಲು ಕಟ್ಟುನಿಟ್ಟಾದ ಗುಣಮಟ್ಟದ ಮಾನದಂಡಗಳು:\n• ನೀರು ಬೆರೆಸುವುದು: ಹಿಮಬಿಂದು ಅಥವಾ ಲ್ಯಾಕ್ಟೋಮೀಟರ್ ಸಾಂದ್ರತೆಯ ಮೂಲಕ ಪತ್ತೆಹಚ್ಚಲಾಗುತ್ತದೆ.\n• ಯೂರಿಯಾ: ಸಾಮಾನ್ಯ ಶ್ರೇಡಿಯು 70 mg/100ml ವರೆಗೆ ಇರುತ್ತದೆ.\n• ಡಿಟರ್ಜೆಂಟ್/ಸೋಪ್: ಸಂಪೂರ್ಣವಾಗಿ ಇರಬಾರದು.\n• ಸ್ಟಾರ್ಚ್/ಮಾಲ್ಟೊಡೆಕ್ಸ್ರಿನ್: SNF ಹೆಚ್ಚಿಸಲು ಸೇರಿಸಲಾಗುತ್ತದೆ; 0% ಇರಬೇಕು.\n• ನ್ಯೂಟ್ರಲೈಸರ್‌ಗಳು (ಸೋಡಾ/ಫಾರ್ಮಾಲಿನ್): ಹುಳಿಯಾಗುವುದನ್ನು ತಡೆಯಲು ಸೇರಿಸಲಾಗುತ್ತದೆ.</string>
+    <string name="contaminant_title">ಸುರಕ್ಷತೆ ಮತ್ತು ಕಲ್ಮಶ ಮಿತಿಗಳು (Contaminant Caps)</string>
+    <string name="contaminant_answer" translatable="true">ಡೈರಿ ಸುರಕ್ಷತೆಯನ್ನು ಖಚಿತಪಡಿಸಲು ನಿಯಂತ್ರಕ ಪ್ರಾಧಿಕಾರಗಳು ಕಟ್ಟುನಿಟ್ಟಾದ ಅವಶೇಷ ಮಿತಿಗಳನ್ನು (MRLs) ಜಾರಿಗೆ ತರುತ್ತವೆ:\n• ಕೀಟನಾಶಕ ಅವಶೇಷಗಳು: 0.01 ರಿಂದ 0.05 mg/kg ಮೀರಬಾರದು.\n• ಭಾರವಾದ ಲೋಹಗಳು (ಸೀಸ/ಪಾದರಸ): ಸೀಸಕ್ಕೆ 0.02 mg/kg ಮತ್ತು ಪಾದರಸಕ್ಕೆ 0.001 mg/kg ಗರಿಷ್ಠ ಮಿತಿ.\n• Aflatoxin M1: ಗರಿಷ್ಠ ಮಿತಿ 0.5 µg/kg.\n• ಪ್ರತಿಜೀವಕ ಅವಶೇಷಗಳು: ಶೂನ್ಯ ಸಹಿಷ್ಣುತೆ; ಪ್ರತಿಜೀವಕ ಕುರುಹುಗಳನ್ನು ಹೊಂದಿರುವ ಹಾಲನ್ನು ಸಂಪೂರ್ಣವಾಗಿ ತಿರಸ್ಕರಿಸಲಾಗುತ್ತದೆ.</string>
+    <string name="fssai_products_title">ಪ್ರಮುಖ ಹಾಲು ಉತ್ಪನ್ನಗಳ ಮಾನದಂಡಗಳು (FSSAI)</string>
+    <string name="fssai_products_answer" translatable="true">FSSAI ನಿಯಮಗಳ ಅಡಿಯಲ್ಲಿ, ವಿವಿಧ ಡೈರಿ ಉತ್ಪನ್ನಗಳು ಕಟ್ಟುನಿಟ್ಟಾದ ಸಂಯೋಜನೆಯ ಮಾನದಂಡಗಳನ್ನು ಪೂರೈಸಬೇಕು:
+• ಟೇಬಲ್ ಬೆಣ್ಣೆ: ಕನಿಷ್ಠ 80.0% ಹಾಲಿನ ಕೊಬ್ಬು ಮತ್ತು ಗರಿಷ್ಠ 16.0% ತೇವಾಂಶ.
+• ಬಿಳಿ ಬೆಣ್ಣೆ: ಕನಿಷ್ಠ 76.0% ಹಾಲಿನ ಕೊಬ್ಬು.
+• ತುಪ್ಪ: ನಿರ್ದಿಷ್ಟ ರೀಚರ್ಟ್ ಮೌಲ್ಯ (RM) ಮತ್ತು ತೇವಾಂಶ ಮಿತಿಗಳೊಂದಿಗೆ ಹಾಲು, ಕ್ರೀಮ್ ಅಥವಾ ಬೆಣ್ಣೆಯಿಂದ ಪಡೆಯಲಾಗಿದೆ.
+• ಕೋವಾ: ಕನಿಷ್ಠ 55.0% ಒಣ ಪದಾರ್ಥಗಳು ಮತ್ತು ಒಣ ಪದಾರ್ಥದ ಮೇಲೆ ಕನಿಷ್ಠ 30.0% ಹಾಲಿನ ಕೊಬ್ಬು.
+• ಪನೀರ್ / ಛನ್ನಾ: ಗರಿಷ್ಠ 60.0% ತೇವಾಂಶ (ಪನೀರ್) / 65.0% ತೇವಾಂಶ (ಛನ್ನಾ), ಒಣ ಪದಾರ್ಥದ ಮೇಲೆ ಕನಿಷ್ಠ 50.0% ಕೊಬ್ಬು.
+• ಐಸ್ ಕ್ರೀಮ್ / ಕುಲ್ಫಿ: ಸರಳ, ಹಣ್ಣು ಅಥವಾ ಕಾಯಿ ಆಧಾರಿತವಾಗಿರುವುದನ್ನು ಅವಲಂಬಿಸಿ ನಿರ್ದಿಷ್ಟ ಕನಿಷ್ಠ ಪ್ರೋಟೀನ್, ಒಣ ಪದಾರ್ಥ ಮತ್ತು ಹಾಲಿನ ಕೊಬ್ಬಿನ ಅವಶ್ಯಕತೆಗಳನ್ನು ಪೂರೈಸಬೇಕು.</string>
 </resources>

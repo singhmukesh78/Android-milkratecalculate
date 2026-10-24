@@ -45,17 +45,17 @@
     <string name="powder_amount">ਪਾਊਡਰ ਦੀ ਕੀਮਤ</string>
     <string name="total_amount">ਕੁੱਲ ਮਾਤਰਾ</string>
     <string name="login_title">ਸਾਈਨ-ਇਨ ਵਿਧੀ ਚੁਣੋ</string>
-    <string name="login_subtitle">ਆਪਣੀ ਡੇਅري ਅਤੇ ਦੁੱਧ ਦੀਆਂ ਦਰਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ</string>
+    <string name="login_subtitle">ਆਪਣੀ ਡੇਅਰੀ ਅਤੇ ਦੁੱਧ ਦੀਆਂ ਦਰਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ</string>
     <string name="continue_google">Google ਨਾਲ ਜਾਰੀ ਰੱਖੋ</string>
     <string name="continue_facebook">Facebook ਨਾਲ ਜਾਰੀ ਰੱਖੋ</string>
     <string name="continue_instagram">Instagram ਨਾਲ ਜਾਰੀ ਰੱਖੋ</string>
     <string name="login_terms">ਜਾਰੀ ਰੱਖ ਕੇ, ਤੁਸੀਂ ਲੈਕਟੋ ਮਾਸਟਰ ਦੀਆਂ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਅਤੇ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਨਾਲ ਸਹਿਮਤ ਹੋ</string>
-    <string name="milk_standards_title">ਦੁੱਧ ਦੀ ਕਿਸਮ ਦੁਆਰਾ ਚਰਬੀ ਅਤੇ SNF ਮਿਆਰ</string>
-    <string name="milk_standards_answer" translatable="true">ਵੱਖ-ਵੱਖ ਦੁੱਧ ਦੀਆਂ ਕਿਸਮਾਂ ਲਈ ਮਿਆਰੀ ਰਚਨਾ ਦੀਆਂ ਲੋੜਾਂ: - ਗਾਂ ਦਾ ਦੁੱਧ: 3.5% ਚਰਬੀ, 8.5% SNF - ਮੱਝ ਦਾ ਦੁੱਧ: 6.0% ਚਰਬੀ, 9.0% SNF - ਟੋਨਡ ਦੁੱਧ: 3.0% ਚਰਬੀ, 8.5% SNF - ਡਬਲ ਟੋਨਡ ਦੁੱਧ: 1.5% ਚਰਬੀ, 9.0% SNF - ਸਟੈਂਡਰਡਾਈਜ਼ਡ ਦੁੱਧ: 4.5% ਚਰਬੀ, 8.5% SNF</string>
+    <string name="milk_standards_title">ਦੁੱਧ ਦੀ ਕਿਸਬ ਦੁਆਰਾ ਚਰਬੀ ਅਤੇ SNF ਮਿਆਰ</string>
+    <string name="milk_standards_answer" translatable="true">ਵੱਖ-ਵੱਖ ਦੁੱਧ ਦੀਆਂ ਕਿਸਮਾਂ ਲਈ ਮਿਆਰੀ ਰਚਨਾ ਦੀਆਂ ਲੋੜਾਂ:\n• <b>ਗਾਂ ਦਾ ਦੁੱਧ:</b> 3.5&#37; ਚਰਬੀ, 8.5&#37; SNF\n• <b>ਮੱਝ ਦਾ ਦੁੱਧ:</b> 6.0&#37; ਚਰਬੀ, 9.0&#37; SNF\n• <b>ਟੋਨਡ ਦੁੱਧ:</b> 3.0&#37; ਚਰਬੀ, 8.5&#37; SNF\n• <b>ਡਬਲ ਟੋਨਡ ਦੁੱਧ:</b> 1.5&#37; ਚਰਬੀ, 9.0&#37; SNF\n• <b>ਸਟੈਂਡਰਡਾਈਜ਼ਡ ਦੁੱਧ:</b> 4.5&#37; ਚਰਬੀ, 8.5&#37; SNF</string>
     <string name="adulteration_title">ਸੁਰੱਖਿਆ ਅਤੇ ਮਿਲਾਵਟ ਸੀਮਾਵਾਂ</string>
     <string name="adulteration_answer" translatable="true">ਦੁੱਧ ਦੀ ਸੁਰੱਖਿਆ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਅਤੇ ਹਾਨੀਕਾਰਕ ਮਿਲਾਵਟ ਤੋਂ ਮੁਕਤ ਰੱਖਣ ਲਈ ਸਖਤ ਗੁਣਵੱਤਾ ਮਿਆਰ.</string>
     <string name="contaminant_title">ਸੁਰੱਖਿਆ ਅਤੇ ਦੂਸ਼ਿਤ ਸੀਮਾਵਾਂ</string>
     <string name="contaminant_answer" translatable="true">ਰੈਗੂਲੇਟਰੀ ਅਥਾਰਟੀ ਡੇਅਰੀ ਸੁਰੱਖਿਆ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਸਖਤ ਸੀਮਾਵਾਂ ਲਾਗੂ ਕਰਦੀਆਂ ਹਨ.</string>
     <string name="fssai_products_title">ਮੁੱਖ ਦੁੱਧ ਉਤਪਾਦਾਂ ਲਈ ਮਿਆਰ (FSSAI)</string>
-    <string name="fssai_products_answer" translatable="true">FSSAI ਨਿਯਮਾਂ ਤਹਿਤ, ਵੱਖ-ਵੱਖ ਡੇਅਰੀ ਉਤਪਾਦਾਂ ਨੂੰ ਸਖਤ ਮਿਆਰਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
+    <string name="fssai_products_answer" translatable="true">FSSAI ਨਿਯਮਾਂ ਤਹਿਤ, ਵੱਖ-ਵੱਖ ਡੇਅਰੀ ਉਤਪਾਦਾਂ ਨੂੰ ਸਖ਼ਤ ਮਿਆਰਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ:\n\n• <b>ਟੇਬਲ ਮੱਖਣ:</b> ਘੱਟੋ-ਘੱਟ 80.0&#37; ਦੁੱਧ ਦੀ ਚਰਬੀ ਅਤੇ ਵੱਧ ਤੋਂ ਵੱਧ 16.0&#37; ਨਮੀ।\n• <b>ਸਫ਼ੇਦ ਮੱਖਣ:</b> ਘੱਟੋ-ਘੱਟ 76.0&#37; ਦੁੱਧ ਦੀ ਚਰਬੀ।\n• <b>ਘਿਓ:</b> ਖਾਸ ਰੀਚਰਟ ਮੁੱਲ (RV) ਅਤੇ ਨਮੀ ਦੀਆਂ ਸੀਮਾਵਾਂ ਦੇ ਨਾਲ ਸਿਰਫ਼ ਦੁੱਧ, ਕਰੀਮ ਜਾਂ ਮੱਖਣ ਤੋਂ ਪ੍ਰਾਪਤ ਕੀਤਾ ਗਿਆ।\n• <b>ਖੋਆ:</b> ਘੱਟੋ-ਘੱਟ 55.0&#37; ਕੁੱਲ ਠੋਸ ਪਦਾਰਥ ਅਤੇ ਸੁੱਕੇ ਪਦਾਰਥ \'ਤੇ ਘੱਟੋ-ਘੱਟ 30.0&#37; ਦੁੱਧ ਦੀ ਚਰਬੀ।\n• <b>ਪਨੀਰ / ਛੰਨਾ:</b> ਵੱਧ ਤੋਂ ਵੱਧ 60.0&#37; ਨਮੀ (ਪਨੀਰ) / 65.0&#37; ਨਮੀ (ਛੰਨਾ), ਸੁੱਕੇ ਪਦਾਰਥ \'ਤੇ ਘੱਟੋ-ਘੱਟ 50.0&#37; ਚਰਬੀ।\n• <b>ਆਈਸ ਕਰੀਮ / ਕੁਲਫੀ:</b> ਸਾਦੀ, ਫਲ ਜਾਂ ਨਟ-ਅਧਾਰਤ ਹੋਣ ਦੇ ਆਧਾਰ \'ਤੇ ਖਾਸ ਘੱਟੋ-ਘੱਟ ਪ੍ਰੋਟੀਨ, ਕੁੱਲ ਠੋਸ ਪਦਾਰਥ ਅਤੇ ਦੁੱਧ ਦੀ ਚਰਬੀ ਦੀਆਂ ਲੋੜਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
 </resources>

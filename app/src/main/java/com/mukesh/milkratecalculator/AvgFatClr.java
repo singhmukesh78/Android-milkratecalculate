@@ -52,11 +52,10 @@ public class AvgFatClr extends AppCompatActivity {
     private String Qty1, Qty2, Qty3, Qty4, Qty5;
     private String Fat1, Fat2, Fat3, Fat4, Fat5;
     private String Clr1, Clr2, Clr3, Clr4, Clr5;
-    private String Rt1, Rt2, Rt3, Rt4, Rt5;
     float snf1, snf2, snf3, snf4, snf5;
 
     float fatAvg = 0.0F, clrAvg = 0.0F, totalMilk = 0.0F, snf = 0.0F;
-    float CalcRate, StRate, fsRatio = 60F;
+    float CalcRate, StRate;
     String AvgFat, AvgClr, TotalMilk, stRate, totalAmt;
     String date;
     float Q1, Q2, Q3, Q4, Q5, F1, F2, F3, F4, F5, C1, C2, C3, C4, C5;

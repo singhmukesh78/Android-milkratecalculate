@@ -52,7 +52,6 @@ public class Avgfatsnf extends AppCompatActivity {
     private String Qty1, Qty2, Qty3, Qty4, Qty5;
     private String Fat1, Fat2, Fat3, Fat4, Fat5;
     private String Snf1, Snf2, Snf3, Snf4, Snf5;
-    private String Rt1, Rt2, Rt3, Rt4, Rt5;
 
     float fatAvg = 0.0F, snfAvg = 0.0F, totalMilk = 0.0F;
     float CalcRate, fsRatio = 50F, StRate;

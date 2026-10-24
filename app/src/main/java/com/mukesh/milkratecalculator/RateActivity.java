@@ -37,7 +37,7 @@ import java.util.Locale;
 public class RateActivity extends AppCompatActivity {
 
     private EditText etStRate, etQty, etFat, etSnf;
-    private TextView tvAmt, tvRate, tvClr;
+    private TextView tvAmt, tvRate, tvClr, tvFatAmt, tvSnfAmt;
     private RadioGroup radioGroupRatio;
     private float StRate, Qty, Fat, Snf, milkAmount, fatAmount, snfAmount;
     String mlkRate, TotalAmount;
@@ -68,6 +68,8 @@ public class RateActivity extends AppCompatActivity {
         tvRate = findViewById(R.id.tvRate);
         tvAmt = findViewById(R.id.tvAmt);
         tvClr = findViewById(R.id.tvClr);
+        tvFatAmt = findViewById(R.id.tvFatAmt);
+        tvSnfAmt = findViewById(R.id.tvSnfAmt);
         radioGroupRatio = findViewById(R.id.radioGroupRatio);
 
         if (radioGroupRatio != null) {
@@ -80,6 +82,12 @@ public class RateActivity extends AppCompatActivity {
                         fsRatio = 60f;
                     } else {
                         fsRatio = 50f;
+                    }
+                    String stRateVal = etStRate.getText().toString().trim();
+                    String fatVal = etFat.getText().toString().trim();
+                    String snfVal = etSnf.getText().toString().trim();
+                    if (!stRateVal.isEmpty() && !fatVal.isEmpty() && !snfVal.isEmpty()) {
+                        btnCalculateRate(null);
                     }
                 }
             });
@@ -154,6 +162,14 @@ public class RateActivity extends AppCompatActivity {
             CLR = Float.toString(clr);
             tvClr.setText(CLR);
 
+            fatAmount = Qty * rsFat;
+            fatAmount = Float.parseFloat(f.format(fatAmount));
+            if (tvFatAmt != null) tvFatAmt.setText(String.valueOf(fatAmount));
+
+            snfAmount = Qty * rsSnf;
+            snfAmount = Float.parseFloat(f.format(snfAmount));
+            if (tvSnfAmt != null) tvSnfAmt.setText(String.valueOf(snfAmount));
+
             milkAmount = Qty * CalcRate;
             milkAmount = Float.parseFloat(f.format(milkAmount));
             TotalAmount = Float.toString(milkAmount);
@@ -171,6 +187,8 @@ public class RateActivity extends AppCompatActivity {
         tvAmt.setText("0.00");
         tvRate.setText("0.00");
         tvClr.setText("0.00");
+        if (tvFatAmt != null) tvFatAmt.setText("0.00");
+        if (tvSnfAmt != null) tvSnfAmt.setText("0.00");
         etFat.requestFocus();
     }
 
@@ -182,6 +200,8 @@ public class RateActivity extends AppCompatActivity {
         String rateVal = tvRate.getText().toString().trim();
         String clrVal = tvClr.getText().toString().trim();
         String amtVal = tvAmt.getText().toString().trim();
+        String fatAmtVal = (tvFatAmt != null) ? tvFatAmt.getText().toString().trim() : "0.00";
+        String snfAmtVal = (tvSnfAmt != null) ? tvSnfAmt.getText().toString().trim() : "0.00";
 
         String ratioStr = "52:48";
         if (radioGroupRatio != null) {
@@ -252,8 +272,10 @@ public class RateActivity extends AppCompatActivity {
                 {"Result Metric", "Value"},
                 {getString(R.string.rate), "₹ " + (rateVal.isEmpty() ? "0.00" : rateVal) + " / liter"},
                 {getString(R.string.clr), (clrVal.isEmpty() ? "0.0" : clrVal)},
+                {"FAT Amount", "₹ " + (fatAmtVal.isEmpty() ? "0.00" : fatAmtVal)},
+                {"SNF Amount", "₹ " + (snfAmtVal.isEmpty() ? "0.00" : snfAmtVal)},
                 {getString(R.string.total_amount), "₹ " + (amtVal.isEmpty() ? "0.00" : amtVal)}
-        }, new int[]{1, 3}, new int[]{Color.parseColor("#0284C7"), Color.parseColor("#16A34A")});
+        }, new int[]{1, 2, 3, 4, 5}, new int[]{Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#16A34A")});
 
         pdfDocument.finishPage(page);
 

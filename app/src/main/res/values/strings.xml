@@ -73,4 +73,6 @@
     <string name="fssai_products_title">Standards for Key Milk Products (FSSAI)</string>
     <string name="fssai_products_answer" translatable="true">Under FSSAI regulations, various dairy products must meet strict compositional standards:\n\n• <b>Table Butter:</b> Minimum 80.0\% Milk Fat and maximum 16.0\% moisture.\n• <b>White Butter:</b> Minimum 76.0\% Milk Fat.\n• <b>Ghee:</b> Derived exclusively from milk, cream, or butter with specified Reichert value (RV) and moisture limits.\n• <b>Khoa:</b> Minimum 55.0\% total solids and minimum 30.0\% milk fat on dry matter basis.\n• <b>Paneer / Chhana:</b> Maximum 60.0\% moisture (Paneer) / 65.0\% moisture (Chhana), with a minimum of 50.0\% fat on a dry matter basis.\n• <b>Ice Cream / Kulfi:</b> Must meet specific minimum protein, total solids, and milk fat requirements depending on whether it is plain, fruit, or nut-based.</string>
 
+    <string name="fat_amount">FAT Amount</string>
+    <string name="snf_amount">SNF Amount</string>
 </resources>

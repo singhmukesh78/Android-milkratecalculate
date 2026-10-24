@@ -140,6 +140,10 @@ public class Avgfatsnf extends AppCompatActivity {
                     } else {
                         fsRatio = 50f;
                     }
+                    String stRateVal = etStRate.getText().toString().trim();
+                    if (!stRateVal.isEmpty()) {
+                        btnCalculateAvgFatSnf(null);
+                    }
                 }
             });
         }

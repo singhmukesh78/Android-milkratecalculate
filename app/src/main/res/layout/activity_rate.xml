@@ -306,7 +306,7 @@
             android:layout_marginBottom="12dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="16dp"
-            app:cardElevation="3dp"
+            app:cardElevation="2dp"
             app:strokeColor="#E2E8F0"
             app:strokeWidth="1dp">
 
@@ -314,7 +314,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="5dp">
 
                 <!-- Card Header Title -->
                 <TextView
@@ -344,7 +344,7 @@
                         android:background="#F8FAFC"
                         android:gravity="center_vertical"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:padding="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -366,7 +366,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="₹ "
                                 android:textColor="#0284C7"
-                                android:textSize="18sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
 
@@ -376,7 +376,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0.00"
                                 android:textColor="#0284C7"
-                                android:textSize="18sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
                         </LinearLayout>
@@ -394,7 +394,7 @@
                         android:background="#F8FAFC"
                         android:gravity="center_vertical"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:padding="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -417,7 +417,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0.0"
                                 android:textColor="#7C3AED"
-                                android:textSize="18sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
                         </LinearLayout>
@@ -440,7 +440,7 @@
                         android:background="#F8FAFC"
                         android:gravity="center_vertical"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:padding="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -462,7 +462,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="₹ "
                                 android:textColor="#4F46E5"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
 
@@ -472,7 +472,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0.00"
                                 android:textColor="#4F46E5"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
                         </LinearLayout>
@@ -490,7 +490,7 @@
                         android:background="#F8FAFC"
                         android:gravity="center_vertical"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:padding="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -512,7 +512,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="₹ "
                                 android:textColor="#059669"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
 
@@ -522,7 +522,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0.00"
                                 android:textColor="#059669"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
                         </LinearLayout>

@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -65,6 +66,27 @@ public class RateActivity extends AppCompatActivity {
         etQty = findViewById(R.id.etQty);
         etFat = findViewById(R.id.etFat);
         etSnf = findViewById(R.id.etSnf);
+
+        InputFilter fatFilter = (source, start, end, dest, dstart, dend) -> {
+            String replacement = source.subSequence(start, end).toString();
+            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length()).toString();
+            if (tentative.matches("^([0-9]|1[0-5])?(\\.\\d{0,1})?$")) {
+                return null;
+            }
+            return "";
+        };
+
+        InputFilter snfFilter = (source, start, end, dest, dstart, dend) -> {
+            String replacement = source.subSequence(start, end).toString();
+            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length()).toString();
+            if (tentative.matches("^([0-9]|10)?(\\.\\d{0,1})?$")) {
+                return null;
+            }
+            return "";
+        };
+
+        etFat.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etSnf.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), snfFilter });
         tvRate = findViewById(R.id.tvRate);
         tvAmt = findViewById(R.id.tvAmt);
         tvClr = findViewById(R.id.tvClr);
@@ -136,13 +158,13 @@ public class RateActivity extends AppCompatActivity {
             Fat = Float.parseFloat(fat);
             Snf = Float.parseFloat(snf);
 
-            if (Fat > 13f) {
-                etFat.setError("FAT cannot be greater than 13");
+            if (Fat > 15f) {
+                etFat.setError("FAT cannot be greater than 15");
                 etFat.requestFocus();
                 return;
             }
-            if (Snf > 12f) {
-                etSnf.setError("SNF cannot be greater than 12");
+            if (Snf > 10f) {
+                etSnf.setError("SNF cannot be greater than 10");
                 etSnf.requestFocus();
                 return;
             }
@@ -272,8 +294,8 @@ public class RateActivity extends AppCompatActivity {
                 {"Result Metric", "Value"},
                 {getString(R.string.rate), "₹ " + (rateVal.isEmpty() ? "0.00" : rateVal) + " / liter"},
                 {getString(R.string.clr), (clrVal.isEmpty() ? "0.0" : clrVal)},
-                {"FAT Amount", "₹ " + (fatAmtVal.isEmpty() ? "0.00" : fatAmtVal)},
-                {"SNF Amount", "₹ " + (snfAmtVal.isEmpty() ? "0.00" : snfAmtVal)},
+                {getString(R.string.fat_amount), "₹ " + (fatAmtVal.isEmpty() ? "0.00" : fatAmtVal)},
+                {getString(R.string.snf_amount), "₹ " + (snfAmtVal.isEmpty() ? "0.00" : snfAmtVal)},
                 {getString(R.string.total_amount), "₹ " + (amtVal.isEmpty() ? "0.00" : amtVal)}
         }, new int[]{1, 2, 3, 4, 5}, new int[]{Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#0284C7"), Color.parseColor("#16A34A")});
 

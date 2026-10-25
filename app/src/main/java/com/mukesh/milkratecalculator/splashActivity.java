@@ -3,7 +3,11 @@ package com.mukesh.milkratecalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -18,6 +22,18 @@ public class splashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Make full screen immersive
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            getWindow().setDecorFitsSystemWindows(false);
+            if (getWindow().getInsetsController() != null) {
+                getWindow().getInsetsController().hide(WindowInsets.Type.statusBars() | WindowInsets.Type.navigationBars());
+                getWindow().getInsetsController().setSystemBarsBehavior(WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+            }
+        } else {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+
         setContentView(R.layout.activity_splash);
 
         if(getSupportActionBar() != null)
@@ -28,14 +44,11 @@ public class splashActivity extends AppCompatActivity {
         ivSplash = findViewById(R.id.ivSplash);
         tvSplash = findViewById(R.id.tvCode);
 
-        //animation = AnimationUtils.loadAnimation(this,R.anim.splash_animation);
         animation = AnimationUtils.loadAnimation(this, R.anim.splash_animation);
 
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
+            public void onAnimationStart(Animation animation) {}
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -44,17 +57,18 @@ public class splashActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
+            public void onAnimationRepeat(Animation animation) {}
         });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
-        ivSplash.startAnimation(animation);
-        tvSplash.startAnimation(animation);
+        if (ivSplash != null && animation != null) {
+            ivSplash.startAnimation(animation);
+        }
+        if (tvSplash != null && animation != null) {
+            tvSplash.startAnimation(animation);
+        }
     }
 }

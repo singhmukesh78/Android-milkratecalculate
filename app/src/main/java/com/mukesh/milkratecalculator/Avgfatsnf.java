@@ -3,6 +3,7 @@ package com.mukesh.milkratecalculator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.view.View;
@@ -59,6 +61,7 @@ public class Avgfatsnf extends AppCompatActivity {
     String date;
     float Q1, Q2, Q3, Q4, Q5, F1, F2, F3, F4, F5, S1, S2, S3, S4, S5;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,6 +151,36 @@ public class Avgfatsnf extends AppCompatActivity {
             });
         }
 
+        InputFilter fatFilter = (source, start, end, dest, dstart, dend) -> {
+            String replacement = source.subSequence(start, end).toString();
+            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length());
+            if (tentative.matches("^([0-9]|1[0-5])?(\\.\\d?)?$")) {
+                return null;
+            }
+            return "";
+        };
+
+        InputFilter snfFilter = (source, start, end, dest, dstart, dend) -> {
+            String replacement = source.subSequence(start, end).toString();
+            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length());
+            if (tentative.matches("^([0-9]|10)?(\\.\\d?)?$")) {
+                return null;
+            }
+            return "";
+        };
+
+        etFat1.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etFat2.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etFat3.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etFat4.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etFat5.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+
+        etSnf1.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), snfFilter });
+        etSnf2.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), snfFilter });
+        etSnf3.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), snfFilter });
+        etSnf4.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), snfFilter });
+        etSnf5.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), snfFilter });
+
         numbermovetonext();
     }
 
@@ -213,6 +246,14 @@ public class Avgfatsnf extends AppCompatActivity {
         S3 = Float.parseFloat(Snf3);
         S4 = Float.parseFloat(Snf4);
         S5 = Float.parseFloat(Snf5);
+
+        if (checkFatSnfError(F1, S1, etFat1, etSnf1) ||
+            checkFatSnfError(F2, S2, etFat2, etSnf2) ||
+            checkFatSnfError(F3, S3, etFat3, etSnf3) ||
+            checkFatSnfError(F4, S4, etFat4, etSnf4) ||
+            checkFatSnfError(F5, S5, etFat5, etSnf5)) {
+            return;
+        }
 
         totalMilk = Q1 + Q2 + Q3 + Q4 + Q5;
         if (totalMilk > 0) {
@@ -292,6 +333,21 @@ public class Avgfatsnf extends AppCompatActivity {
         tvRate.setText(Rate);
     }
 
+    private boolean checkFatSnfError(float fVal, float sVal, EditText etFat, EditText etSnf) {
+        if (fVal > 15f) {
+            etFat.setError("FAT cannot be greater than 15");
+            etFat.requestFocus();
+            return true;
+        }
+        if (sVal > 10f) {
+            etSnf.setError("SNF cannot be greater than 10");
+            etSnf.requestFocus();
+            return true;
+        }
+        return false;
+    }
+
+    @SuppressLint("SetTextI18n")
     public void btnOnClickClear(View view) {
         etQty1.setText(" ");
         etQty2.setText(" ");

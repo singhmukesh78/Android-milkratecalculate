@@ -125,6 +125,20 @@ public class AvgFatClr extends AppCompatActivity {
         etClr4.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), clrFilter });
         etClr5.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), clrFilter });
 
+        InputFilter fatFilter = (source, start, end, dest, dstart, dend) -> {
+            String replacement = source.subSequence(start, end).toString();
+            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length());
+            if (tentative.matches("^([0-9]|1[0-5])?(\\.\\d?)?$")) {
+                return null;
+            }
+            return "";
+        };
+        etFat1.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etFat2.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etFat3.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etFat4.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+        etFat5.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
+
         tvTMlk = findViewById(R.id.tvTMlk);
         tvAvgFat = findViewById(R.id.tvAvgFat);
         tvAvgClr = findViewById(R.id.tvAvgClr);
@@ -209,29 +223,11 @@ public class AvgFatClr extends AppCompatActivity {
         C4 = Float.parseFloat(Clr4);
         C5 = Float.parseFloat(Clr5);
 
-        if (C1 > 0 && C1 < 15f) {
-            etClr1.setError("CLR cannot be less than 15");
-            etClr1.requestFocus();
-            return;
-        }
-        if (C2 > 0 && C2 < 15f) {
-            etClr2.setError("CLR cannot be less than 15");
-            etClr2.requestFocus();
-            return;
-        }
-        if (C3 > 0 && C3 < 15f) {
-            etClr3.setError("CLR cannot be less than 15");
-            etClr3.requestFocus();
-            return;
-        }
-        if (C4 > 0 && C4 < 15f) {
-            etClr4.setError("CLR cannot be less than 15");
-            etClr4.requestFocus();
-            return;
-        }
-        if (C5 > 0 && C5 < 15f) {
-            etClr5.setError("CLR cannot be less than 15");
-            etClr5.requestFocus();
+        if (checkFatClrError(F1, C1, etFat1, etClr1) ||
+            checkFatClrError(F2, C2, etFat2, etClr2) ||
+            checkFatClrError(F3, C3, etFat3, etClr3) ||
+            checkFatClrError(F4, C4, etFat4, etClr4) ||
+            checkFatClrError(F5, C5, etFat5, etClr5)) {
             return;
         }
 
@@ -319,6 +315,20 @@ public class AvgFatClr extends AppCompatActivity {
         tvAvgClr.setText(AvgClr);
         tvAvgTAmt.setText(totalAmt);
         tvRate.setText(Rate);
+    }
+
+    private boolean checkFatClrError(float fVal, float cVal, EditText etFat, EditText etClr) {
+        if (fVal > 15f) {
+            etFat.setError("FAT cannot be greater than 15");
+            etFat.requestFocus();
+            return true;
+        }
+        if (cVal > 0 && cVal < 24f) {
+            etClr.setError("CLR cannot be less than 24");
+            etClr.requestFocus();
+            return true;
+        }
+        return false;
     }
 
     public void btnOnClickClear(View view) {

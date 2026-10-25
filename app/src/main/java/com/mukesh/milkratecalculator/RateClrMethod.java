@@ -65,6 +65,15 @@ public class RateClrMethod extends AppCompatActivity {
 
         etQtyClr = findViewById(R.id.etQtyClr);
         etFat = findViewById(R.id.etFATPer);
+        InputFilter fatFilter = (source, start, end, dest, dstart, dend) -> {
+            String replacement = source.subSequence(start, end).toString();
+            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length());
+            if (tentative.matches("^([0-9]|1[0-5])?(\\.\\d?)?$")) {
+                return null;
+            }
+            return "";
+        };
+        etFat.setFilters(new InputFilter[] { new InputFilter.LengthFilter(4), fatFilter });
         etCLR = findViewById(R.id.etCLR);
         etCLR.setFilters(new InputFilter[] {
             new InputFilter.LengthFilter(4),
@@ -145,6 +154,12 @@ public class RateClrMethod extends AppCompatActivity {
             qty = QtyClr.isEmpty() ? 0f : Float.parseFloat(QtyClr);
             fat = Fat.isEmpty() ? 0f : Float.parseFloat(Fat);
             clr = CLR.isEmpty() ? 0f : Float.parseFloat(CLR);
+
+            if (fat > 15f) {
+                etFat.setError("FAT cannot be greater than 15");
+                etFat.requestFocus();
+                return;
+            }
 
             if (clr > 0 && clr < 24f) {
                 etCLR.setError("CLR cannot be less than 24");

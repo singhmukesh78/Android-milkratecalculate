@@ -1,5 +1,6 @@
 package com.mukesh.milkratecalculator;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -40,7 +41,7 @@ public class RateActivity extends AppCompatActivity {
     private EditText etStRate, etQty, etFat, etSnf;
     private TextView tvAmt, tvRate, tvClr, tvFatAmt, tvSnfAmt;
     private RadioGroup radioGroupRatio;
-    private float StRate, Qty, Fat, Snf, milkAmount, fatAmount, snfAmount;
+    private float StRate, Qty, Fat, Snf, fatAmount, snfAmount;
     String mlkRate, TotalAmount;
     float CalcRate, fsRatio = 50F, clr = 0F, rsFat = 0F, rsSnf = 0F;
     String stRate, qty, fat, snf, CLR;
@@ -69,8 +70,8 @@ public class RateActivity extends AppCompatActivity {
 
         InputFilter fatFilter = (source, start, end, dest, dstart, dend) -> {
             String replacement = source.subSequence(start, end).toString();
-            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length()).toString();
-            if (tentative.matches("^([0-9]|1[0-5])?(\\.\\d{0,1})?$")) {
+            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length());
+            if (tentative.matches("^([0-9]|1[0-5])?(\\.\\d?)?$")) {
                 return null;
             }
             return "";
@@ -78,8 +79,8 @@ public class RateActivity extends AppCompatActivity {
 
         InputFilter snfFilter = (source, start, end, dest, dstart, dend) -> {
             String replacement = source.subSequence(start, end).toString();
-            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length()).toString();
-            if (tentative.matches("^([0-9]|10)?(\\.\\d{0,1})?$")) {
+            String tentative = dest.subSequence(0, dstart).toString() + replacement + dest.subSequence(dend, dest.length());
+            if (tentative.matches("^([0-9]|10)?(\\.\\d?)?$")) {
                 return null;
             }
             return "";
@@ -192,7 +193,7 @@ public class RateActivity extends AppCompatActivity {
             snfAmount = Float.parseFloat(f.format(snfAmount));
             if (tvSnfAmt != null) tvSnfAmt.setText(String.valueOf(snfAmount));
 
-            milkAmount = Qty * CalcRate;
+            float milkAmount = Qty * CalcRate;
             milkAmount = Float.parseFloat(f.format(milkAmount));
             TotalAmount = Float.toString(milkAmount);
             tvAmt.setText(TotalAmount);
@@ -202,6 +203,7 @@ public class RateActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     public void btnOnClickClear(View view) {
         etQty.setText("");
         etFat.setText("");

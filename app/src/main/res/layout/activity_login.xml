@@ -1,132 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F3F6F9"
+    android:fillViewport="true"
     tools:context=".LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:orientation="vertical"
-        android:background="#F68630"
-        >
+        android:padding="24dp">
 
+        <!-- App Logo / Icon -->
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_marginTop="90dp"
-            android:src="@drawable/imgnumberverification"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_launcher" />
 
-            tools:ignore="ContentDescription" />
-
+        <!-- App Title -->
         <TextView
-            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OTP Verification"
-            android:layout_marginTop="30dp"
-            android:textSize="20sp"
-            android:textColor="#109595"
-            android:textStyle="bold"
-            />
+            android:text="@string/app_name"
+            android:textColor="@color/teal_700"
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
+        <!-- Subtitle -->
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="@string/login_subtitle"
+            android:textColor="#64748B"
+            android:textSize="14sp" />
+
+        <!-- Login Card Container -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="50dp"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:textColor="#109595"
-            android:text="We will send you an OTP on this given mobile no">
+            android:layout_marginHorizontal="12dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#E2E8F0"
+            app:strokeWidth="1dp">
 
-        </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/login_title"
+                    android:textColor="#1E293B"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Google Sign In Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGoogleSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="14dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/continue_google"
+                    android:textAllCaps="false"
+                    android:textColor="#1E293B"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="14dp"
+                    app:elevation="1dp"
+                    app:icon="@drawable/ic_google"
+                    app:iconGravity="start"
+                    app:iconPadding="14dp"
+                    app:iconTint="@null"
+                    app:strokeColor="#CBD5E1"
+                    app:strokeWidth="1dp" />
+
+                <!-- Facebook Sign In Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFacebookSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="14dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/continue_facebook"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#1877F2"
+                    app:cornerRadius="14dp"
+                    app:elevation="2dp"
+                    app:icon="@drawable/ic_facebook"
+                    app:iconGravity="start"
+                    app:iconPadding="14dp"
+                    app:iconTint="@color/white"
+                    app:strokeWidth="0dp" />
+
+                <!-- Instagram Sign In Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInstagramSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/continue_instagram"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#E4405F"
+                    app:cornerRadius="14dp"
+                    app:elevation="2dp"
+                    app:icon="@drawable/ic_instagram"
+                    app:iconGravity="start"
+                    app:iconPadding="14dp"
+                    app:iconTint="@color/white"
+                    app:strokeWidth="0dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Footer terms -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:background="@drawable/backgroundbox"
+            android:layout_marginTop="32dp"
             android:gravity="center"
-            android:orientation="horizontal">
-
-                    <com.hbb20.CountryCodePicker
-                        android:id="@+id/countryCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="2dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginTop="4dp"
-                        android:gravity="left"
-                        app:ccpDialog_textColor="@color/teal_700"
-                        app:ccp_autoDetectCountry="true"
-                        app:ccp_contentColor="@color/teal_700"
-                        app:ccp_defaultNameCode="IND"
-                        app:ccp_showFlag="true"
-                        app:ccp_showFullName="false"
-                        app:ccp_showNameCode="false"
-                        app:ccp_textSize="18sp">
-
-
-                    </com.hbb20.CountryCodePicker>
-
-            <EditText
-                android:id="@+id/etMobilNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginLeft="1dp"
-                android:background="@null"
-                android:hint="Mobil Number"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="10"
-                android:textColor="@color/black"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-
-<Button
-    android:id="@+id/SndOtp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Get OTP"
-    android:layout_marginStart="30dp"
-    android:layout_marginEnd="30dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="12dp"
-    android:textStyle="bold"
-    android:textColor="@color/black"
-    android:background="@drawable/backbutton"
-    />
-
-<com.google.android.material.button.MaterialButton
-    android:id="@+id/btnGoogleSignIn"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="30dp"
-    android:layout_marginEnd="30dp"
-    android:layout_marginBottom="30dp"
-    android:text="@string/google_sign_in"
-    android:textColor="@color/black"
-    android:textStyle="bold"
-    app:backgroundTint="@color/white"
-    app:cornerRadius="12dp"
-    app:elevation="3dp"
-    app:strokeColor="#CCCCCC"
-    app:strokeWidth="1dp" />
+            android:text="@string/login_terms"
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
 
     </LinearLayout>
-</ScrollView>
-
+</androidx.core.widget.NestedScrollView>

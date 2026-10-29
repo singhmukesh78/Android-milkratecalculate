@@ -82,7 +82,11 @@ public class dashboard extends AppCompatActivity {
         }
         if(id  == R.id.hindi)
         {
-            changeLanguage("Hi");
+            changeLanguage("hi");
+        }
+        if(id  == R.id.kannada)
+        {
+            changeLanguage("kn");
         }
 
         return super.onOptionsItemSelected(item);
